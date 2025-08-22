@@ -1,0 +1,2199 @@
+Script started on 2025-08-22 12:38:15-04:00 [COMMAND="set -x && make test" TERM="screen.xterm-256color" TTY="/dev/pty3" COLUMNS="131" LINES="44"]
++ make test
+make build
+make[1]: Entering directory '/home/phdyex/my-repos/psutil'
+PYTHONWARNINGS=always PYTHONUNBUFFERED=1 PSUTIL_DEBUG=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 setup.py build_ext -i --parallel 4
+running build_ext
+PYTHONWARNINGS=always PYTHONUNBUFFERED=1 PSUTIL_DEBUG=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -c "import psutil"  # make sure it actually worked
+make[1]: Leaving directory '/home/phdyex/my-repos/psutil'
+PYTHONWARNINGS=always PYTHONUNBUFFERED=1 PSUTIL_DEBUG=1 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest --ignore=psutil/tests/test_memleaks.py --ignore=psutil/tests/test_sudo.py 
+======================================================= test session starts =======================================================
+collecting ... 
+collected 592 items                                                                                                               
+psutil/tests/test_aix.py::AIXSpecificTestCase::test_cpu_count_logical SKIPPED (AIX only)
+psutil/tests/test_aix.py::AIXSpecificTestCase::test_cpu_stats SKIPPED (AIX only)
+psutil/tests/test_aix.py::AIXSpecificTestCase::test_net_if_addrs_names SKIPPED (AIX only)
+psutil/tests/test_aix.py::AIXSpecificTestCase::test_swap_memory SKIPPED (AIX only)
+psutil/tests/test_aix.py::AIXSpecificTestCase::test_virtual_memory SKIPPED (AIX only)
+psutil/tests/test_bsd.py::BSDTestCase::test_cpu_count_logical SKIPPED (sysctl cmd not available)
+psutil/tests/test_bsd.py::BSDTestCase::test_disks SKIPPED (BSD only)
+psutil/tests/test_bsd.py::BSDTestCase::test_net_if_stats SKIPPED (ifconfig cmd not available)
+psutil/tests/test_bsd.py::BSDTestCase::test_process_create_time SKIPPED (BSD only)
+psutil/tests/test_bsd.py::BSDTestCase::test_virtual_memory_total SKIPPED (sysctl cmd not available)
+psutil/tests/test_bsd.py::FreeBSDPsutilTestCase::test_cmdline SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDPsutilTestCase::test_cpu_times SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDPsutilTestCase::test_ctx_switches SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDPsutilTestCase::test_exe SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDPsutilTestCase::test_memory_maps SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDPsutilTestCase::test_uids_gids SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_boot_time SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_cpu_frequency_against_sysctl SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_cpu_stats_ctx_switches SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_cpu_stats_interrupts SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_cpu_stats_soft_interrupts SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_cpu_stats_syscalls SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_active SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_buffers SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_cached SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_free SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_inactive SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_total SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_muse_vmem_wired SKIPPED (muse not installed)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_sensors_battery SKIPPED (no battery)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_sensors_battery_against_sysctl SKIPPED (no battery)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_sensors_battery_no_battery SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_sensors_temperatures_against_sysctl SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_swapmem_free SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_swapmem_total SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_swapmem_used SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_vmem_active SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_vmem_buffers SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_vmem_cached SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_vmem_free SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_vmem_inactive SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::FreeBSDSystemTestCase::test_vmem_wired SKIPPED (FREEBSD only)
+psutil/tests/test_bsd.py::OpenBSDTestCase::test_boot_time SKIPPED (OPENBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_cpu_stats_ctx_switches SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_cpu_stats_interrupts SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_swapmem_free SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_swapmem_total SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_swapmem_used SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_vmem_buffers SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_vmem_cached SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_vmem_free SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_vmem_shared SKIPPED (NETBSD only)
+psutil/tests/test_bsd.py::NetBSDTestCase::test_vmem_total SKIPPED (NETBSD only)
+psutil/tests/test_connections.py::TestBasicOperations::test_invalid_kind PASSED
+psutil/tests/test_connections.py::TestBasicOperations::test_process FAILED
+________________________________________________ TestBasicOperations.test_process _________________________________________________
+psutil/tests/test_connections.py:93: in test_process
+    with create_sockets():
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestBasicOperations::test_system FAILED
+_________________________________________________ TestBasicOperations.test_system _________________________________________________
+psutil/tests/test_connections.py:88: in test_system
+    with create_sockets():
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestUnconnectedSockets::test_tcp_v4 FAILED
+_______________________________________________ TestUnconnectedSockets.test_tcp_v4 ________________________________________________
+psutil/tests/test_connections.py:154: in test_tcp_v4
+    conn = self.check_socket(sock)
+psutil/tests/test_connections.py:126: in check_socket
+    conn = self.get_conn_from_sock(sock)
+psutil/tests/test_connections.py:116: in get_conn_from_sock
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestUnconnectedSockets::test_tcp_v6 FAILED
+_______________________________________________ TestUnconnectedSockets.test_tcp_v6 ________________________________________________
+psutil/tests/test_connections.py:162: in test_tcp_v6
+    conn = self.check_socket(sock)
+psutil/tests/test_connections.py:126: in check_socket
+    conn = self.get_conn_from_sock(sock)
+psutil/tests/test_connections.py:116: in get_conn_from_sock
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestUnconnectedSockets::test_udp_v4 FAILED
+_______________________________________________ TestUnconnectedSockets.test_udp_v4 ________________________________________________
+psutil/tests/test_connections.py:169: in test_udp_v4
+    conn = self.check_socket(sock)
+psutil/tests/test_connections.py:126: in check_socket
+    conn = self.get_conn_from_sock(sock)
+psutil/tests/test_connections.py:116: in get_conn_from_sock
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestUnconnectedSockets::test_udp_v6 FAILED
+_______________________________________________ TestUnconnectedSockets.test_udp_v6 ________________________________________________
+psutil/tests/test_connections.py:177: in test_udp_v6
+    conn = self.check_socket(sock)
+psutil/tests/test_connections.py:126: in check_socket
+    conn = self.get_conn_from_sock(sock)
+psutil/tests/test_connections.py:116: in get_conn_from_sock
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestUnconnectedSockets::test_unix_tcp FAILED
+______________________________________________ TestUnconnectedSockets.test_unix_tcp _______________________________________________
+psutil/tests/test_connections.py:185: in test_unix_tcp
+    conn = self.check_socket(sock)
+psutil/tests/test_connections.py:126: in check_socket
+    conn = self.get_conn_from_sock(sock)
+psutil/tests/test_connections.py:116: in get_conn_from_sock
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestUnconnectedSockets::test_unix_udp FAILED
+______________________________________________ TestUnconnectedSockets.test_unix_udp _______________________________________________
+psutil/tests/test_connections.py:193: in test_unix_udp
+    conn = self.check_socket(sock)
+psutil/tests/test_connections.py:126: in check_socket
+    conn = self.get_conn_from_sock(sock)
+psutil/tests/test_connections.py:116: in get_conn_from_sock
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestConnectedSocket::test_tcp FAILED
+__________________________________________________ TestConnectedSocket.test_tcp ___________________________________________________
+psutil/tests/test_connections.py:213: in test_tcp
+    assert len(cons) == 2
+E   assert 0 == 2
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestConnectedSocket::test_unix FAILED
+__________________________________________________ TestConnectedSocket.test_unix __________________________________________________
+psutil/tests/test_connections.py:229: in test_unix
+    server, client = unix_socketpair(testfn)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestFilters::test_combos FAILED
+_____________________________________________________ TestFilters.test_combos _____________________________________________________
+psutil/tests/test_connections.py:374: in test_combos
+    assert len(cons) == 1
+E   assert 0 == 1
+E    +  where 0 = len([])
+psutil/tests/test_connections.py::TestFilters::test_count FAILED
+_____________________________________________________ TestFilters.test_count ______________________________________________________
+psutil/tests/test_connections.py:426: in test_count
+    with create_sockets():
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestFilters::test_filters FAILED
+____________________________________________________ TestFilters.test_filters _____________________________________________________
+psutil/tests/test_connections.py:265: in test_filters
+    with create_sockets():
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestSystemWideConnections::test_it FAILED
+________________________________________________ TestSystemWideConnections.test_it ________________________________________________
+psutil/tests/test_connections.py:496: in test_it
+    with create_sockets():
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestSystemWideConnections::test_multi_sockets_procs FAILED
+_______________________________________ TestSystemWideConnections.test_multi_sockets_procs ________________________________________
+psutil/tests/test_connections.py:516: in test_multi_sockets_procs
+    with create_sockets() as socks:
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_connections.py::TestMisc::test_net_connection_constants PASSED
+psutil/tests/test_contracts.py::TestAvailConstantsAPIs::test_PROCFS_PATH PASSED
+psutil/tests/test_contracts.py::TestAvailConstantsAPIs::test_linux_ioprio_linux PASSED
+psutil/tests/test_contracts.py::TestAvailConstantsAPIs::test_linux_ioprio_windows PASSED
+psutil/tests/test_contracts.py::TestAvailConstantsAPIs::test_rlimit PASSED
+psutil/tests/test_contracts.py::TestAvailConstantsAPIs::test_win_priority PASSED
+psutil/tests/test_contracts.py::TestAvailSystemAPIs::test_battery PASSED
+psutil/tests/test_contracts.py::TestAvailSystemAPIs::test_cpu_freq PASSED
+psutil/tests/test_contracts.py::TestAvailSystemAPIs::test_sensors_fans PASSED
+psutil/tests/test_contracts.py::TestAvailSystemAPIs::test_sensors_temperatures PASSED
+psutil/tests/test_contracts.py::TestAvailSystemAPIs::test_win_service_get PASSED
+psutil/tests/test_contracts.py::TestAvailSystemAPIs::test_win_service_iter PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_cpu_affinity PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_cpu_num PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_environ PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_gids PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_io_counters PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_ionice PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_memory_maps PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_num_fds PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_num_handles PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_rlimit PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_terminal PASSED
+psutil/tests/test_contracts.py::TestAvailProcessAPIs::test_uids PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_boot_time PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_cpu_count PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_cpu_freq SKIPPED (not supported)
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_cpu_percent PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_cpu_times PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_cpu_times_percent PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_disk_io_counters PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_disk_partitions PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_net_connections FAILED
+_____________________________________________ TestSystemAPITypes.test_net_connections _____________________________________________
+psutil/tests/test_contracts.py:248: in test_net_connections
+    with create_sockets():
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_net_if_addrs PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_net_if_stats PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_net_io_counters PASSED
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_sensors_fans SKIPPED (not supported)
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_sensors_temperatures SKIPPED (not supported)
+psutil/tests/test_contracts.py::TestSystemAPITypes::test_users PASSED
+psutil/tests/test_contracts.py::TestProcessWaitType::test_negative_signal PASSED
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstFree::test_available SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstFree::test_free SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstFree::test_shared SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstFree::test_total SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstFree::test_used SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstVmstat::test_active SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstVmstat::test_buffers SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstVmstat::test_free SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstVmstat::test_inactive SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstVmstat::test_total SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryAgainstVmstat::test_used SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryMocks::test_avail_old_comes_from_kernel SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryMocks::test_avail_old_missing_fields SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryMocks::test_avail_old_missing_zoneinfo SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryMocks::test_avail_old_percent SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryMocks::test_virtual_memory_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemVirtualMemoryMocks::test_warnings_on_misses SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_emulate_meminfo_has_no_metrics SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_free SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_meminfo_against_sysinfo SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_missing_sin_sout SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_no_vmstat_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_total SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemSwapMemory::test_used SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemCPUTimes::test_fields SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemCPUCountLogical::test_against_lscpu SKIPPED (lscpu utility not available)
+psutil/tests/test_linux.py::TestSystemCPUCountLogical::test_against_nproc SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemCPUCountLogical::test_against_sysdev_cpu_num SKIPPED (/sys/devices/system/cpu doe...)
+psutil/tests/test_linux.py::TestSystemCPUCountLogical::test_against_sysdev_cpu_online SKIPPED (/sys/devices/system/cpu/...)
+psutil/tests/test_linux.py::TestSystemCPUCountLogical::test_emulate_fallbacks SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemCPUCountCores::test_against_lscpu SKIPPED (lscpu utility not available)
+psutil/tests/test_linux.py::TestSystemCPUCountCores::test_emulate_none SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemCPUCountCores::test_method_2 SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemCPUFrequency::test_emulate_data SKIPPED (not supported)
+psutil/tests/test_linux.py::TestSystemCPUFrequency::test_emulate_multi_cpu SKIPPED (not supported)
+psutil/tests/test_linux.py::TestSystemCPUFrequency::test_emulate_no_scaling_cur_freq_file SKIPPED (not supported)
+psutil/tests/test_linux.py::TestSystemCPUFrequency::test_emulate_use_cpuinfo SKIPPED (not supported)
+psutil/tests/test_linux.py::TestSystemCPUFrequency::test_emulate_use_second_file SKIPPED (not supported)
+psutil/tests/test_linux.py::TestSystemCPUStats::test_interrupts SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestLoadAvg::test_getloadavg SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemNetIfAddrs::test_ips SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemNetIfStats::test_against_ifconfig SKIPPED (ifconfig utility not available)
+psutil/tests/test_linux.py::TestSystemNetIfStats::test_flags SKIPPED (ifconfig utility not available)
+psutil/tests/test_linux.py::TestSystemNetIfStats::test_mtu SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemNetIOCounters::test_against_ifconfig SKIPPED (ifconfig utility not available)
+psutil/tests/test_linux.py::TestSystemNetConnections::test_emulate_ipv6_unsupported SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemNetConnections::test_emulate_unix SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskPartitions::test_against_df SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskPartitions::test_emulate_realpath_fail SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskPartitions::test_zfs_fs SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_exclude_partitions SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_include_partitions SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_kernel_2_4 SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_kernel_2_6_full SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_kernel_2_6_limited SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_not_impl SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSystemDiskIoCounters::test_emulate_use_sysfs SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestRootFsDeviceFinder::test_against_findmnt SKIPPED (findmnt utility not available)
+psutil/tests/test_linux.py::TestRootFsDeviceFinder::test_call_methods SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestRootFsDeviceFinder::test_comparisons SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestRootFsDeviceFinder::test_disk_partitions_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_boot_time SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_boot_time_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_cpu_steal_decrease SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_issue_687 SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_no_procfs_on_import SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_pid_exists_no_proc_status SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_procfs_path SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestMisc::test_users SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_energy_full_0 SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_energy_full_not_avail SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_no_power SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_power_not_plugged SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_power_not_plugged_2 SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_power_plugged SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_power_plugged_2 SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_emulate_power_undetermined SKIPPED (no battery)
+psutil/tests/test_linux.py::TestSensorsBattery::test_percent SKIPPED (acpi utility not available)
+psutil/tests/test_linux.py::TestSensorsBatteryEmulated::test_it SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSensorsTemperatures::test_emulate_class_hwmon SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSensorsTemperatures::test_emulate_class_thermal SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestSensorsFans::test_emulate_data SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_cmdline_mixed_separators SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_cmdline_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_cmdline_spaces_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_create_time_monotonic SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_cwd_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_exe_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_issue_1014 SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_issue_2418 SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_net_connections_enametoolong SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_open_files_enametoolong SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_open_files_fd_gone SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_open_files_file_gone SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_open_files_mode SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_parse_smaps_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_parse_smaps_vs_memory_maps SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_readlink_path_deleted_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_rlimit_zombie SKIPPED (not supported)
+psutil/tests/test_linux.py::TestProcess::test_stat_file_parsing SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_status_file_parsing SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_terminal_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcess::test_threads_mocked SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_cpu_affinity SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_cpu_affinity_eligible_cpus SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_gids SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_name SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_num_ctx_switches SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_num_threads SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_ppid SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_status SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestProcessAgainstStatus::test_uids SKIPPED (LINUX only)
+psutil/tests/test_linux.py::TestUtils::test_readlink SKIPPED (LINUX only)
+psutil/tests/test_misc.py::TestSpecialMethods::test_access_denied__repr__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_access_denied__str__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_check_pid_range PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_error__repr__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_error__str__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_no_such_process__repr__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_no_such_process__str__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_process__eq__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_process__hash__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_process__repr__ FAILED
+_____________________________________________ TestSpecialMethods.test_process__repr__ _____________________________________________
+psutil/tests/test_misc.py:61: in test_process__repr__
+    assert "status='terminated'" in r
+E   assert "status='terminated'" in "psutil.Process(pid=2843, name='python3.9', status='running', exitcode=<Negsignal.SIGTERM: -15>, started='12:38:21')"
+psutil/tests/test_misc.py::TestSpecialMethods::test_process__str__ FAILED
+_____________________________________________ TestSpecialMethods.test_process__str__ ______________________________________________
+psutil/tests/test_misc.py:95: in test_process__str__
+    self.test_process__repr__(func=str)
+psutil/tests/test_misc.py:61: in test_process__repr__
+    assert "status='terminated'" in r
+E   assert "status='terminated'" in "psutil.Process(pid=2844, name='python3.9', status='running', exitcode=<Negsignal.SIGTERM: -15>, started='12:38:21')"
+psutil/tests/test_misc.py::TestSpecialMethods::test_timeout_expired__repr__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_timeout_expired__str__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_zombie_process__repr__ PASSED
+psutil/tests/test_misc.py::TestSpecialMethods::test_zombie_process__str__ PASSED
+psutil/tests/test_misc.py::TestMisc::test__all__ PASSED
+psutil/tests/test_misc.py::TestMisc::test_ad_on_process_creation PASSED
+psutil/tests/test_misc.py::TestMisc::test_process_as_dict_no_new_names PASSED
+psutil/tests/test_misc.py::TestMisc::test_sanity_version_check PASSED
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='threads', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='terminal', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='create_time', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='open_files', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='num_ctx_switches', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='memory_full_info', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cpu_times', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='uids', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='exe', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='username', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='num_threads', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='net_connections', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='memory_maps', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='status', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='io_counters', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='nice', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='ppid', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='name', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='memory_info', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cwd', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cmdline', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='gids', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='num_fds', proc="psutil.Process(pid=2834, name='python3', status='running', started='12:38:16')") SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='users') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cpu_times') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='getloadavg') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='swap_memory') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cpu_times') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='disk_usage') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='pid_exists') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='virtual_memory') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cpu_count') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='net_io_counters') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='disk_io_counters') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cpu_count') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='net_connections') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='net_if_addrs') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='boot_time') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='net_if_stats') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='disk_partitions') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='cpu_stats') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization (name='pids') SUBPASS
+psutil/tests/test_misc.py::TestMisc::test_serialization PASSED
+psutil/tests/test_misc.py::TestMisc::test_version PASSED
+psutil/tests/test_misc.py::TestMemoizeDecorator::test_class PASSED
+psutil/tests/test_misc.py::TestMemoizeDecorator::test_class_singleton PASSED
+psutil/tests/test_misc.py::TestMemoizeDecorator::test_classmethod PASSED
+psutil/tests/test_misc.py::TestMemoizeDecorator::test_function PASSED
+psutil/tests/test_misc.py::TestMemoizeDecorator::test_original PASSED
+psutil/tests/test_misc.py::TestMemoizeDecorator::test_staticmethod PASSED
+psutil/tests/test_misc.py::TestCommonModule::test_cat_bcat PASSED
+psutil/tests/test_misc.py::TestCommonModule::test_debug PASSED
+psutil/tests/test_misc.py::TestCommonModule::test_isfile_strict PASSED
+psutil/tests/test_misc.py::TestCommonModule::test_memoize_when_activated PASSED
+psutil/tests/test_misc.py::TestCommonModule::test_parse_environ_block PASSED
+psutil/tests/test_misc.py::TestCommonModule::test_supports_ipv6 PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_cache_call_twice PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_cache_changing_keys PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_cache_clear PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_cache_clear_public_apis FAILED
+__________________________________________ TestWrapNumbers.test_cache_clear_public_apis ___________________________________________
+psutil/tests/test_misc.py:856: in test_cache_clear_public_apis
+    assert 'psutil.disk_io_counters' in cache
+E   AssertionError: assert 'psutil.disk_io_counters' in {}
+psutil/tests/test_misc.py::TestWrapNumbers::test_cache_first_call PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_cache_wrap PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_changing_keys PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_changing_keys_w_wrap PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_first_call PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_increase_but_no_wrap PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_input_hasnt_changed PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_real_data PASSED
+psutil/tests/test_misc.py::TestWrapNumbers::test_wrap PASSED
+psutil/tests/test_osx.py::TestProcess::test_process_create_time SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_boot_time SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_cpu_count_cores SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_cpu_count_logical SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_cpu_freq SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_disks SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_net_if_stats SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_sensors_battery SKIPPED (no battery)
+psutil/tests/test_osx.py::TestSystemAPIs::test_swapmem_sin SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_swapmem_sout SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_vmem_active SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_vmem_free SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_vmem_inactive SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_vmem_total SKIPPED (MACOS only)
+psutil/tests/test_osx.py::TestSystemAPIs::test_vmem_wired SKIPPED (MACOS only)
+psutil/tests/test_posix.py::TestProcess::test_cmdline FAILED
+____________________________________________________ TestProcess.test_cmdline _____________________________________________________
+psutil/tests/test_posix.py:305: in test_cmdline
+    ps_cmdline = ps_args(self.pid)
+psutil/tests/test_posix.py:116: in ps_args
+    out = ps(field, pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_create_time FAILED
+__________________________________________________ TestProcess.test_create_time ___________________________________________________
+psutil/tests/test_posix.py:270: in test_create_time
+    time_ps = ps('start', self.pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_exe FAILED
+______________________________________________________ TestProcess.test_exe _______________________________________________________
+psutil/tests/test_posix.py:284: in test_exe
+    ps_pathname = ps_name(self.pid)
+psutil/tests/test_posix.py:108: in ps_name
+    command = ps(field, pid).split()
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_gid FAILED
+______________________________________________________ TestProcess.test_gid _______________________________________________________
+psutil/tests/test_posix.py:177: in test_gid
+    gid_ps = ps('rgid', self.pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_name FAILED
+______________________________________________________ TestProcess.test_name ______________________________________________________
+psutil/tests/test_posix.py:216: in test_name
+    name_ps = ps_name(self.pid)
+psutil/tests/test_posix.py:108: in ps_name
+    command = ps(field, pid).split()
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_name_long PASSED
+psutil/tests/test_posix.py::TestProcess::test_name_long_cmdline_ad_exc PASSED
+psutil/tests/test_posix.py::TestProcess::test_name_long_cmdline_nsp_exc PASSED
+psutil/tests/test_posix.py::TestProcess::test_nice FAILED
+______________________________________________________ TestProcess.test_nice ______________________________________________________
+psutil/tests/test_posix.py:320: in test_nice
+    ps_nice = ps('nice', self.pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_ppid FAILED
+______________________________________________________ TestProcess.test_ppid ______________________________________________________
+psutil/tests/test_posix.py:167: in test_ppid
+    ppid_ps = ps('ppid', self.pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_rss_memory FAILED
+___________________________________________________ TestProcess.test_rss_memory ___________________________________________________
+psutil/tests/test_posix.py:201: in test_rss_memory
+    rss_ps = ps_rss(self.pid)
+psutil/tests/test_posix.py:126: in ps_rss
+    return ps(field, pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_uid FAILED
+______________________________________________________ TestProcess.test_uid _______________________________________________________
+psutil/tests/test_posix.py:172: in test_uid
+    uid_ps = ps('uid', self.pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_username FAILED
+____________________________________________________ TestProcess.test_username ____________________________________________________
+psutil/tests/test_posix.py:182: in test_username
+    username_ps = ps('user', self.pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestProcess::test_username_no_resolution PASSED
+psutil/tests/test_posix.py::TestProcess::test_vsz_memory FAILED
+___________________________________________________ TestProcess.test_vsz_memory ___________________________________________________
+psutil/tests/test_posix.py:211: in test_vsz_memory
+    vsz_ps = ps_vsz(self.pid)
+psutil/tests/test_posix.py:133: in ps_vsz
+    return ps(field, pid)
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestSystemAPIs::test_disk_usage PASSED
+psutil/tests/test_posix.py::TestSystemAPIs::test_nic_names SKIPPED (no ifconfig cmd)
+psutil/tests/test_posix.py::TestSystemAPIs::test_os_waitpid_bad_ret_status PASSED
+psutil/tests/test_posix.py::TestSystemAPIs::test_os_waitpid_eintr PASSED
+psutil/tests/test_posix.py::TestSystemAPIs::test_os_waitpid_let_raise PASSED
+psutil/tests/test_posix.py::TestSystemAPIs::test_pid_exists_let_raise PASSED
+psutil/tests/test_posix.py::TestSystemAPIs::test_pids FAILED
+____________________________________________________ TestSystemAPIs.test_pids _____________________________________________________
+psutil/tests/test_posix.py:333: in test_pids
+    pids_ps = sorted(ps("pid"))
+psutil/tests/test_posix.py:71: in ps
+    output = sh(cmd)
+psutil/tests/__init__.py:441: in wrapper
+    return fun(*args, **kwargs)
+psutil/tests/__init__.py:608: in sh
+    raise RuntimeError(stdout + stderr)
+E   RuntimeError: ps: unknown option -- o
+E   Try `ps --help' for more information.
+psutil/tests/test_posix.py::TestSystemAPIs::test_users SKIPPED (no users on this system)
+psutil/tests/test_posix.py::TestSystemAPIs::test_users_started SKIPPED (no users on this system)
+psutil/tests/test_posix.py::TestMisc::test_getpagesize PASSED
+psutil/tests/test_process.py::TestProcess::test_as_dict FAILED
+____________________________________________________ TestProcess.test_as_dict _____________________________________________________
+psutil/tests/test_process.py:1277: in test_as_dict
+    d = p.as_dict()
+psutil/__init__.py:592: in as_dict
+    ret = meth()
+psutil/_common.py:469: in wrapper
+    raise err from None
+psutil/_common.py:467: in wrapper
+    ret = fun(self)
+psutil/__init__.py:679: in ppid
+    self._raise_if_pid_reused()
+psutil/__init__.py:482: in _raise_if_pid_reused
+    raise NoSuchProcess(self.pid, self._name, msg=msg)
+E   psutil.NoSuchProcess: process no longer exists and its PID has been reused (pid=790)
+psutil/tests/test_process.py::TestProcess::test_children PASSED
+psutil/tests/test_process.py::TestProcess::test_children_duplicates psutil-debug [/home/phdyex/my-repos/psutil/psutil/__init__.py:1547]> refreshing Process instance for reused PID 790
+PASSED
+psutil/tests/test_process.py::TestProcess::test_children_mocked_ctime PASSED
+psutil/tests/test_process.py::TestProcess::test_children_recursive PASSED
+psutil/tests/test_process.py::TestProcess::test_cmdline FAILED
+____________________________________________________ TestProcess.test_cmdline _____________________________________________________
+psutil/tests/test_process.py:740: in test_cmdline
+    assert ' '.join(p.cmdline()) == ' '.join(cmdline)
+E   AssertionError: assert '/usr/bin/pyt...n range(100)]' == '/usr/bin/pyt...n range(100)]'
+E     
+E     - /usr/bin/python3.9.exe -c import time; [time.sleep(0.1) for x in range(100)]
+E     ?                   ----
+E     + /usr/bin/python3.9 -c import time; [time.sleep(0.1) for x in range(100)]
+psutil/tests/test_process.py::TestProcess::test_cpu_affinity SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_cpu_affinity_all_combinations SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_cpu_affinity_errs SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_cpu_num SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_cpu_percent PASSED
+psutil/tests/test_process.py::TestProcess::test_cpu_percent_numcpus_none PASSED
+psutil/tests/test_process.py::TestProcess::test_cpu_times PASSED
+psutil/tests/test_process.py::TestProcess::test_cpu_times_2 PASSED
+psutil/tests/test_process.py::TestProcess::test_create_time PASSED
+psutil/tests/test_process.py::TestProcess::test_cwd PASSED
+psutil/tests/test_process.py::TestProcess::test_cwd_2 PASSED
+psutil/tests/test_process.py::TestProcess::test_environ SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_exe PASSED
+psutil/tests/test_process.py::TestProcess::test_gids PASSED
+psutil/tests/test_process.py::TestProcess::test_halfway_terminated_process psutil-debug [/home/phdyex/my-repos/psutil/psutil/__init__.py:1547]> refreshing Process instance for reused PID 790
+FAILED
+___________________________________________ TestProcess.test_halfway_terminated_process ___________________________________________
+psutil/tests/test_process.py:1371: in test_halfway_terminated_process
+    self.assert_proc_gone(p)
+psutil/tests/__init__.py:1073: in assert_proc_gone
+    for fun, name in ns.iter(ns.all, clear_cache=True):
+psutil/tests/__init__.py:1569: in iter
+    self.clear_cache()
+psutil/tests/__init__.py:1576: in clear_cache
+    self._proc._init(self._proc.pid, _ignore_nsp=True)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=2878)
+psutil/tests/test_process.py::TestProcess::test_invalid_pid PASSED
+psutil/tests/test_process.py::TestProcess::test_io_counters FAILED
+__________________________________________________ TestProcess.test_io_counters ___________________________________________________
+psutil/tests/test_process.py:312: in test_io_counters
+    assert io2.read_count > io1.read_count
+E   assert 0 > 0
+E    +  where 0 = pio(read_count=0, write_count=0, read_bytes=0, write_bytes=0).read_count
+E    +  and   0 = pio(read_count=0, write_count=0, read_bytes=0, write_bytes=0).read_count
+psutil/tests/test_process.py::TestProcess::test_ionice_linux SKIPPED (linux only)
+psutil/tests/test_process.py::TestProcess::test_ionice_win SKIPPED (not supported on this win version)
+psutil/tests/test_process.py::TestProcess::test_is_running PASSED
+psutil/tests/test_process.py::TestProcess::test_kill FAILED
+______________________________________________________ TestProcess.test_kill ______________________________________________________
+psutil/tests/test_process.py:89: in test_kill
+    self.assert_proc_gone(p)
+psutil/tests/__init__.py:1073: in assert_proc_gone
+    for fun, name in ns.iter(ns.all, clear_cache=True):
+psutil/tests/__init__.py:1569: in iter
+    self.clear_cache()
+psutil/tests/__init__.py:1576: in clear_cache
+    self._proc._init(self._proc.pid, _ignore_nsp=True)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=2880)
+psutil/tests/test_process.py::TestProcess::test_long_cmdline import _frozen_importlib # frozen
+import _imp # builtin
+import '_thread' # <class '_frozen_importlib.BuiltinImporter'>
+import '_warnings' # <class '_frozen_importlib.BuiltinImporter'>
+import '_weakref' # <class '_frozen_importlib.BuiltinImporter'>
+import '_io' # <class '_frozen_importlib.BuiltinImporter'>
+import 'marshal' # <class '_frozen_importlib.BuiltinImporter'>
+import 'posix' # <class '_frozen_importlib.BuiltinImporter'>
+import '_frozen_importlib_external' # <class '_frozen_importlib.FrozenImporter'>
+# installing zipimport hook
+import 'time' # <class '_frozen_importlib.BuiltinImporter'>
+import 'zipimport' # <class '_frozen_importlib.FrozenImporter'>
+# installed zipimport hook
+# trying /home/phdyex/.local/lib/python3.9/encodings.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/encodings.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/encodings.dll
+# trying /home/phdyex/.local/lib/python3.9/encodings.py
+# trying /home/phdyex/.local/lib/python3.9/encodings.pyc
+# /usr/lib/python3.9/encodings/__pycache__/__init__.cpython-39.pyc matches /usr/lib/python3.9/encodings/__init__.py
+# code object from '/usr/lib/python3.9/encodings/__pycache__/__init__.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/codecs.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/codecs.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/codecs.dll
+# trying /home/phdyex/.local/lib/python3.9/codecs.py
+# trying /home/phdyex/.local/lib/python3.9/codecs.pyc
+# trying /usr/lib/python3.9/codecs.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/codecs.abi3.dll
+# trying /usr/lib/python3.9/codecs.dll
+# trying /usr/lib/python3.9/codecs.py
+# /usr/lib/python3.9/__pycache__/codecs.cpython-39.pyc matches /usr/lib/python3.9/codecs.py
+# code object from '/usr/lib/python3.9/__pycache__/codecs.cpython-39.pyc'
+import '_codecs' # <class '_frozen_importlib.BuiltinImporter'>
+import 'codecs' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff09130>
+# trying /usr/lib/python3.9/encodings/aliases.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/encodings/aliases.abi3.dll
+# trying /usr/lib/python3.9/encodings/aliases.dll
+# trying /usr/lib/python3.9/encodings/aliases.py
+# /usr/lib/python3.9/encodings/__pycache__/aliases.cpython-39.pyc matches /usr/lib/python3.9/encodings/aliases.py
+# code object from '/usr/lib/python3.9/encodings/__pycache__/aliases.cpython-39.pyc'
+import 'encodings.aliases' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff176a0>
+import 'encodings' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff71c40>
+# trying /usr/lib/python3.9/encodings/utf_8.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/encodings/utf_8.abi3.dll
+# trying /usr/lib/python3.9/encodings/utf_8.dll
+# trying /usr/lib/python3.9/encodings/utf_8.py
+# /usr/lib/python3.9/encodings/__pycache__/utf_8.cpython-39.pyc matches /usr/lib/python3.9/encodings/utf_8.py
+# code object from '/usr/lib/python3.9/encodings/__pycache__/utf_8.cpython-39.pyc'
+import 'encodings.utf_8' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff71d90>
+import '_signal' # <class '_frozen_importlib.BuiltinImporter'>
+# trying /usr/lib/python3.9/encodings/latin_1.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/encodings/latin_1.abi3.dll
+# trying /usr/lib/python3.9/encodings/latin_1.dll
+# trying /usr/lib/python3.9/encodings/latin_1.py
+# /usr/lib/python3.9/encodings/__pycache__/latin_1.cpython-39.pyc matches /usr/lib/python3.9/encodings/latin_1.py
+# code object from '/usr/lib/python3.9/encodings/__pycache__/latin_1.cpython-39.pyc'
+import 'encodings.latin_1' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff177c0>
+# trying /home/phdyex/.local/lib/python3.9/io.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/io.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/io.dll
+# trying /home/phdyex/.local/lib/python3.9/io.py
+# trying /home/phdyex/.local/lib/python3.9/io.pyc
+# trying /usr/lib/python3.9/io.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/io.abi3.dll
+# trying /usr/lib/python3.9/io.dll
+# trying /usr/lib/python3.9/io.py
+# /usr/lib/python3.9/__pycache__/io.cpython-39.pyc matches /usr/lib/python3.9/io.py
+# code object from '/usr/lib/python3.9/__pycache__/io.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/abc.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/abc.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/abc.dll
+# trying /home/phdyex/.local/lib/python3.9/abc.py
+# trying /home/phdyex/.local/lib/python3.9/abc.pyc
+# trying /usr/lib/python3.9/abc.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/abc.abi3.dll
+# trying /usr/lib/python3.9/abc.dll
+# trying /usr/lib/python3.9/abc.py
+# /usr/lib/python3.9/__pycache__/abc.cpython-39.pyc matches /usr/lib/python3.9/abc.py
+# code object from '/usr/lib/python3.9/__pycache__/abc.cpython-39.pyc'
+import '_abc' # <class '_frozen_importlib.BuiltinImporter'>
+import 'abc' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff17c70>
+import 'io' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff179a0>
+# trying /home/phdyex/.local/lib/python3.9/warnings.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/warnings.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/warnings.dll
+# trying /home/phdyex/.local/lib/python3.9/warnings.py
+# trying /home/phdyex/.local/lib/python3.9/warnings.pyc
+# trying /usr/lib/python3.9/warnings.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/warnings.abi3.dll
+# trying /usr/lib/python3.9/warnings.dll
+# trying /usr/lib/python3.9/warnings.py
+# /usr/lib/python3.9/__pycache__/warnings.cpython-39.pyc matches /usr/lib/python3.9/warnings.py
+# code object from '/usr/lib/python3.9/__pycache__/warnings.cpython-39.pyc'
+import 'warnings' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff17d00>
+# trying /home/phdyex/.local/lib/python3.9/site.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site.dll
+# trying /home/phdyex/.local/lib/python3.9/site.py
+# trying /home/phdyex/.local/lib/python3.9/site.pyc
+# trying /usr/lib/python3.9/site.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/site.abi3.dll
+# trying /usr/lib/python3.9/site.dll
+# trying /usr/lib/python3.9/site.py
+# /usr/lib/python3.9/__pycache__/site.cpython-39.pyc matches /usr/lib/python3.9/site.py
+# code object from '/usr/lib/python3.9/__pycache__/site.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/os.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/os.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/os.dll
+# trying /home/phdyex/.local/lib/python3.9/os.py
+# trying /home/phdyex/.local/lib/python3.9/os.pyc
+# trying /usr/lib/python3.9/os.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/os.abi3.dll
+# trying /usr/lib/python3.9/os.dll
+# trying /usr/lib/python3.9/os.py
+# /usr/lib/python3.9/__pycache__/os.cpython-39.pyc matches /usr/lib/python3.9/os.py
+# code object from '/usr/lib/python3.9/__pycache__/os.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/stat.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/stat.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/stat.dll
+# trying /home/phdyex/.local/lib/python3.9/stat.py
+# trying /home/phdyex/.local/lib/python3.9/stat.pyc
+# trying /usr/lib/python3.9/stat.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/stat.abi3.dll
+# trying /usr/lib/python3.9/stat.dll
+# trying /usr/lib/python3.9/stat.py
+# /usr/lib/python3.9/__pycache__/stat.cpython-39.pyc matches /usr/lib/python3.9/stat.py
+# code object from '/usr/lib/python3.9/__pycache__/stat.cpython-39.pyc'
+import '_stat' # <class '_frozen_importlib.BuiltinImporter'>
+import 'stat' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffed6a60>
+# trying /home/phdyex/.local/lib/python3.9/_collections_abc.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/_collections_abc.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/_collections_abc.dll
+# trying /home/phdyex/.local/lib/python3.9/_collections_abc.py
+# trying /home/phdyex/.local/lib/python3.9/_collections_abc.pyc
+# trying /usr/lib/python3.9/_collections_abc.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/_collections_abc.abi3.dll
+# trying /usr/lib/python3.9/_collections_abc.dll
+# trying /usr/lib/python3.9/_collections_abc.py
+# /usr/lib/python3.9/__pycache__/_collections_abc.cpython-39.pyc matches /usr/lib/python3.9/_collections_abc.py
+# code object from '/usr/lib/python3.9/__pycache__/_collections_abc.cpython-39.pyc'
+import '_collections_abc' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffed6ac0>
+# trying /home/phdyex/.local/lib/python3.9/posixpath.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/posixpath.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/posixpath.dll
+# trying /home/phdyex/.local/lib/python3.9/posixpath.py
+# trying /home/phdyex/.local/lib/python3.9/posixpath.pyc
+# trying /usr/lib/python3.9/posixpath.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/posixpath.abi3.dll
+# trying /usr/lib/python3.9/posixpath.dll
+# trying /usr/lib/python3.9/posixpath.py
+# /usr/lib/python3.9/__pycache__/posixpath.cpython-39.pyc matches /usr/lib/python3.9/posixpath.py
+# code object from '/usr/lib/python3.9/__pycache__/posixpath.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/genericpath.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/genericpath.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/genericpath.dll
+# trying /home/phdyex/.local/lib/python3.9/genericpath.py
+# trying /home/phdyex/.local/lib/python3.9/genericpath.pyc
+# trying /usr/lib/python3.9/genericpath.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/genericpath.abi3.dll
+# trying /usr/lib/python3.9/genericpath.dll
+# trying /usr/lib/python3.9/genericpath.py
+# /usr/lib/python3.9/__pycache__/genericpath.cpython-39.pyc matches /usr/lib/python3.9/genericpath.py
+# code object from '/usr/lib/python3.9/__pycache__/genericpath.cpython-39.pyc'
+import 'genericpath' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe89160>
+import 'posixpath' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffed6ee0>
+import 'os' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffecd190>
+# trying /home/phdyex/.local/lib/python3.9/_sitebuiltins.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/_sitebuiltins.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/_sitebuiltins.dll
+# trying /home/phdyex/.local/lib/python3.9/_sitebuiltins.py
+# trying /home/phdyex/.local/lib/python3.9/_sitebuiltins.pyc
+# trying /usr/lib/python3.9/_sitebuiltins.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/_sitebuiltins.abi3.dll
+# trying /usr/lib/python3.9/_sitebuiltins.dll
+# trying /usr/lib/python3.9/_sitebuiltins.py
+# /usr/lib/python3.9/__pycache__/_sitebuiltins.cpython-39.pyc matches /usr/lib/python3.9/_sitebuiltins.py
+# code object from '/usr/lib/python3.9/__pycache__/_sitebuiltins.cpython-39.pyc'
+import '_sitebuiltins' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffecddf0>
+# trying /home/phdyex/.local/lib/python3.9/_bootlocale.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/_bootlocale.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/_bootlocale.dll
+# trying /home/phdyex/.local/lib/python3.9/_bootlocale.py
+# trying /home/phdyex/.local/lib/python3.9/_bootlocale.pyc
+# trying /usr/lib/python3.9/_bootlocale.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/_bootlocale.abi3.dll
+# trying /usr/lib/python3.9/_bootlocale.dll
+# trying /usr/lib/python3.9/_bootlocale.py
+# /usr/lib/python3.9/__pycache__/_bootlocale.cpython-39.pyc matches /usr/lib/python3.9/_bootlocale.py
+# code object from '/usr/lib/python3.9/__pycache__/_bootlocale.cpython-39.pyc'
+import '_locale' # <class '_frozen_importlib.BuiltinImporter'>
+import '_bootlocale' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe895e0>
+# trying /home/phdyex/.local/lib/python3.9/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/__editable___psutil_7_1_0_finder.dll
+# trying /home/phdyex/.local/lib/python3.9/__editable___psutil_7_1_0_finder.py
+# trying /home/phdyex/.local/lib/python3.9/__editable___psutil_7_1_0_finder.pyc
+# trying /usr/lib/python3.9/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /usr/lib/python3.9/__editable___psutil_7_1_0_finder.dll
+# trying /usr/lib/python3.9/__editable___psutil_7_1_0_finder.py
+# trying /usr/lib/python3.9/__editable___psutil_7_1_0_finder.pyc
+# trying /usr/lib/python3.9/lib-dynload/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/__editable___psutil_7_1_0_finder.dll
+# trying /usr/lib/python3.9/lib-dynload/__editable___psutil_7_1_0_finder.py
+# trying /usr/lib/python3.9/lib-dynload/__editable___psutil_7_1_0_finder.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/__editable___psutil_7_1_0_finder.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/__editable___psutil_7_1_0_finder.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/__editable___psutil_7_1_0_finder.pyc
+# zipimport: found 16 names in '/home/phdyex/.local/lib/python3.9/site-packages/mklink-0.3.1-py3.9.egg'
+# trying /home/phdyex/my-repos/psutil/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /home/phdyex/my-repos/psutil/__editable___psutil_7_1_0_finder.dll
+# trying /home/phdyex/my-repos/psutil/__editable___psutil_7_1_0_finder.py
+# trying /home/phdyex/my-repos/psutil/__editable___psutil_7_1_0_finder.pyc
+# trying /usr/local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.dll
+# trying /usr/local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.py
+# /usr/local/lib/python3.9/site-packages/__pycache__/__editable___psutil_7_1_0_finder.cpython-39.pyc matches /usr/local/lib/python3.9/site-packages/__editable___psutil_7_1_0_finder.py
+# code object from '/usr/local/lib/python3.9/site-packages/__pycache__/__editable___psutil_7_1_0_finder.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/__future__.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/__future__.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/__future__.dll
+# trying /home/phdyex/.local/lib/python3.9/__future__.py
+# trying /home/phdyex/.local/lib/python3.9/__future__.pyc
+# trying /usr/lib/python3.9/__future__.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/__future__.abi3.dll
+# trying /usr/lib/python3.9/__future__.dll
+# trying /usr/lib/python3.9/__future__.py
+# /usr/lib/python3.9/__pycache__/__future__.cpython-39.pyc matches /usr/lib/python3.9/__future__.py
+# code object from '/usr/lib/python3.9/__pycache__/__future__.cpython-39.pyc'
+import '__future__' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffeb7100>
+# trying /home/phdyex/.local/lib/python3.9/importlib.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/importlib.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/importlib.dll
+# trying /home/phdyex/.local/lib/python3.9/importlib.py
+# trying /home/phdyex/.local/lib/python3.9/importlib.pyc
+# /usr/lib/python3.9/importlib/__pycache__/__init__.cpython-39.pyc matches /usr/lib/python3.9/importlib/__init__.py
+# code object from '/usr/lib/python3.9/importlib/__pycache__/__init__.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/types.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/types.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/types.dll
+# trying /home/phdyex/.local/lib/python3.9/types.py
+# trying /home/phdyex/.local/lib/python3.9/types.pyc
+# trying /usr/lib/python3.9/types.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/types.abi3.dll
+# trying /usr/lib/python3.9/types.dll
+# trying /usr/lib/python3.9/types.py
+# /usr/lib/python3.9/__pycache__/types.cpython-39.pyc matches /usr/lib/python3.9/types.py
+# code object from '/usr/lib/python3.9/__pycache__/types.cpython-39.pyc'
+import 'types' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffeb7c70>
+import 'importlib' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffeb7910>
+# trying /usr/lib/python3.9/importlib/machinery.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/importlib/machinery.abi3.dll
+# trying /usr/lib/python3.9/importlib/machinery.dll
+# trying /usr/lib/python3.9/importlib/machinery.py
+# /usr/lib/python3.9/importlib/__pycache__/machinery.cpython-39.pyc matches /usr/lib/python3.9/importlib/machinery.py
+# code object from '/usr/lib/python3.9/importlib/__pycache__/machinery.cpython-39.pyc'
+import 'importlib.machinery' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffeb7a90>
+# trying /usr/lib/python3.9/importlib/util.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/importlib/util.abi3.dll
+# trying /usr/lib/python3.9/importlib/util.dll
+# trying /usr/lib/python3.9/importlib/util.py
+# /usr/lib/python3.9/importlib/__pycache__/util.cpython-39.pyc matches /usr/lib/python3.9/importlib/util.py
+# code object from '/usr/lib/python3.9/importlib/__pycache__/util.cpython-39.pyc'
+# trying /usr/lib/python3.9/importlib/abc.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/importlib/abc.abi3.dll
+# trying /usr/lib/python3.9/importlib/abc.dll
+# trying /usr/lib/python3.9/importlib/abc.py
+# /usr/lib/python3.9/importlib/__pycache__/abc.cpython-39.pyc matches /usr/lib/python3.9/importlib/abc.py
+# code object from '/usr/lib/python3.9/importlib/__pycache__/abc.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/typing.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/typing.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/typing.dll
+# trying /home/phdyex/.local/lib/python3.9/typing.py
+# trying /home/phdyex/.local/lib/python3.9/typing.pyc
+# trying /usr/lib/python3.9/typing.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/typing.abi3.dll
+# trying /usr/lib/python3.9/typing.dll
+# trying /usr/lib/python3.9/typing.py
+# /usr/lib/python3.9/__pycache__/typing.cpython-39.pyc matches /usr/lib/python3.9/typing.py
+# code object from '/usr/lib/python3.9/__pycache__/typing.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/collections.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/collections.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/collections.dll
+# trying /home/phdyex/.local/lib/python3.9/collections.py
+# trying /home/phdyex/.local/lib/python3.9/collections.pyc
+# /usr/lib/python3.9/collections/__pycache__/__init__.cpython-39.pyc matches /usr/lib/python3.9/collections/__init__.py
+# code object from '/usr/lib/python3.9/collections/__pycache__/__init__.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/heapq.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/heapq.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/heapq.dll
+# trying /home/phdyex/.local/lib/python3.9/heapq.py
+# trying /home/phdyex/.local/lib/python3.9/heapq.pyc
+# trying /usr/lib/python3.9/heapq.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/heapq.abi3.dll
+# trying /usr/lib/python3.9/heapq.dll
+# trying /usr/lib/python3.9/heapq.py
+# /usr/lib/python3.9/__pycache__/heapq.cpython-39.pyc matches /usr/lib/python3.9/heapq.py
+# code object from '/usr/lib/python3.9/__pycache__/heapq.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/_heapq.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/_heapq.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/_heapq.dll
+# trying /home/phdyex/.local/lib/python3.9/_heapq.py
+# trying /home/phdyex/.local/lib/python3.9/_heapq.pyc
+# trying /usr/lib/python3.9/_heapq.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/_heapq.abi3.dll
+# trying /usr/lib/python3.9/_heapq.dll
+# trying /usr/lib/python3.9/_heapq.py
+# trying /usr/lib/python3.9/_heapq.pyc
+# trying /usr/lib/python3.9/lib-dynload/_heapq.cpython-39-x86_64-cygwin.dll
+# extension module '_heapq' loaded from '/usr/lib/python3.9/lib-dynload/_heapq.cpython-39-x86_64-cygwin.dll'
+# extension module '_heapq' executed from '/usr/lib/python3.9/lib-dynload/_heapq.cpython-39-x86_64-cygwin.dll'
+import '_heapq' # <_frozen_importlib_external.ExtensionFileLoader object at 0x6fffffe1e3a0>
+import 'heapq' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe16e50>
+import 'itertools' # <class '_frozen_importlib.BuiltinImporter'>
+# trying /home/phdyex/.local/lib/python3.9/keyword.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/keyword.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/keyword.dll
+# trying /home/phdyex/.local/lib/python3.9/keyword.py
+# trying /home/phdyex/.local/lib/python3.9/keyword.pyc
+# trying /usr/lib/python3.9/keyword.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/keyword.abi3.dll
+# trying /usr/lib/python3.9/keyword.dll
+# trying /usr/lib/python3.9/keyword.py
+# /usr/lib/python3.9/__pycache__/keyword.cpython-39.pyc matches /usr/lib/python3.9/keyword.py
+# code object from '/usr/lib/python3.9/__pycache__/keyword.cpython-39.pyc'
+import 'keyword' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe1e490>
+# trying /home/phdyex/.local/lib/python3.9/operator.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/operator.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/operator.dll
+# trying /home/phdyex/.local/lib/python3.9/operator.py
+# trying /home/phdyex/.local/lib/python3.9/operator.pyc
+# trying /usr/lib/python3.9/operator.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/operator.abi3.dll
+# trying /usr/lib/python3.9/operator.dll
+# trying /usr/lib/python3.9/operator.py
+# /usr/lib/python3.9/__pycache__/operator.cpython-39.pyc matches /usr/lib/python3.9/operator.py
+# code object from '/usr/lib/python3.9/__pycache__/operator.cpython-39.pyc'
+import '_operator' # <class '_frozen_importlib.BuiltinImporter'>
+import 'operator' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe1e520>
+# trying /home/phdyex/.local/lib/python3.9/reprlib.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/reprlib.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/reprlib.dll
+# trying /home/phdyex/.local/lib/python3.9/reprlib.py
+# trying /home/phdyex/.local/lib/python3.9/reprlib.pyc
+# trying /usr/lib/python3.9/reprlib.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/reprlib.abi3.dll
+# trying /usr/lib/python3.9/reprlib.dll
+# trying /usr/lib/python3.9/reprlib.py
+# /usr/lib/python3.9/__pycache__/reprlib.cpython-39.pyc matches /usr/lib/python3.9/reprlib.py
+# code object from '/usr/lib/python3.9/__pycache__/reprlib.cpython-39.pyc'
+import 'reprlib' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe1e5e0>
+import '_collections' # <class '_frozen_importlib.BuiltinImporter'>
+import 'collections' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe7d310>
+# trying /usr/lib/python3.9/collections/abc.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/collections/abc.abi3.dll
+# trying /usr/lib/python3.9/collections/abc.dll
+# trying /usr/lib/python3.9/collections/abc.py
+# /usr/lib/python3.9/collections/__pycache__/abc.cpython-39.pyc matches /usr/lib/python3.9/collections/abc.py
+# code object from '/usr/lib/python3.9/collections/__pycache__/abc.cpython-39.pyc'
+import 'collections.abc' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe7d670>
+# trying /home/phdyex/.local/lib/python3.9/contextlib.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/contextlib.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/contextlib.dll
+# trying /home/phdyex/.local/lib/python3.9/contextlib.py
+# trying /home/phdyex/.local/lib/python3.9/contextlib.pyc
+# trying /usr/lib/python3.9/contextlib.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/contextlib.abi3.dll
+# trying /usr/lib/python3.9/contextlib.dll
+# trying /usr/lib/python3.9/contextlib.py
+# /usr/lib/python3.9/__pycache__/contextlib.cpython-39.pyc matches /usr/lib/python3.9/contextlib.py
+# code object from '/usr/lib/python3.9/__pycache__/contextlib.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/functools.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/functools.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/functools.dll
+# trying /home/phdyex/.local/lib/python3.9/functools.py
+# trying /home/phdyex/.local/lib/python3.9/functools.pyc
+# trying /usr/lib/python3.9/functools.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/functools.abi3.dll
+# trying /usr/lib/python3.9/functools.dll
+# trying /usr/lib/python3.9/functools.py
+# /usr/lib/python3.9/__pycache__/functools.cpython-39.pyc matches /usr/lib/python3.9/functools.py
+# code object from '/usr/lib/python3.9/__pycache__/functools.cpython-39.pyc'
+import '_functools' # <class '_frozen_importlib.BuiltinImporter'>
+import 'functools' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe2bf40>
+import 'contextlib' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe7d880>
+# trying /home/phdyex/.local/lib/python3.9/re.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/re.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/re.dll
+# trying /home/phdyex/.local/lib/python3.9/re.py
+# trying /home/phdyex/.local/lib/python3.9/re.pyc
+# trying /usr/lib/python3.9/re.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/re.abi3.dll
+# trying /usr/lib/python3.9/re.dll
+# trying /usr/lib/python3.9/re.py
+# /usr/lib/python3.9/__pycache__/re.cpython-39.pyc matches /usr/lib/python3.9/re.py
+# code object from '/usr/lib/python3.9/__pycache__/re.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/enum.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/enum.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/enum.dll
+# trying /home/phdyex/.local/lib/python3.9/enum.py
+# trying /home/phdyex/.local/lib/python3.9/enum.pyc
+# trying /usr/lib/python3.9/enum.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/enum.abi3.dll
+# trying /usr/lib/python3.9/enum.dll
+# trying /usr/lib/python3.9/enum.py
+# /usr/lib/python3.9/__pycache__/enum.cpython-39.pyc matches /usr/lib/python3.9/enum.py
+# code object from '/usr/lib/python3.9/__pycache__/enum.cpython-39.pyc'
+import 'enum' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffdd4f40>
+# trying /home/phdyex/.local/lib/python3.9/sre_compile.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_compile.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_compile.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_compile.py
+# trying /home/phdyex/.local/lib/python3.9/sre_compile.pyc
+# trying /usr/lib/python3.9/sre_compile.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/sre_compile.abi3.dll
+# trying /usr/lib/python3.9/sre_compile.dll
+# trying /usr/lib/python3.9/sre_compile.py
+# /usr/lib/python3.9/__pycache__/sre_compile.cpython-39.pyc matches /usr/lib/python3.9/sre_compile.py
+# code object from '/usr/lib/python3.9/__pycache__/sre_compile.cpython-39.pyc'
+import '_sre' # <class '_frozen_importlib.BuiltinImporter'>
+# trying /home/phdyex/.local/lib/python3.9/sre_parse.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_parse.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_parse.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_parse.py
+# trying /home/phdyex/.local/lib/python3.9/sre_parse.pyc
+# trying /usr/lib/python3.9/sre_parse.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/sre_parse.abi3.dll
+# trying /usr/lib/python3.9/sre_parse.dll
+# trying /usr/lib/python3.9/sre_parse.py
+# /usr/lib/python3.9/__pycache__/sre_parse.cpython-39.pyc matches /usr/lib/python3.9/sre_parse.py
+# code object from '/usr/lib/python3.9/__pycache__/sre_parse.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/sre_constants.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_constants.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_constants.dll
+# trying /home/phdyex/.local/lib/python3.9/sre_constants.py
+# trying /home/phdyex/.local/lib/python3.9/sre_constants.pyc
+# trying /usr/lib/python3.9/sre_constants.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/sre_constants.abi3.dll
+# trying /usr/lib/python3.9/sre_constants.dll
+# trying /usr/lib/python3.9/sre_constants.py
+# /usr/lib/python3.9/__pycache__/sre_constants.cpython-39.pyc matches /usr/lib/python3.9/sre_constants.py
+# code object from '/usr/lib/python3.9/__pycache__/sre_constants.cpython-39.pyc'
+import 'sre_constants' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffdfea30>
+import 'sre_parse' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffdeefa0>
+import 'sre_compile' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffdee760>
+# trying /home/phdyex/.local/lib/python3.9/copyreg.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/copyreg.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/copyreg.dll
+# trying /home/phdyex/.local/lib/python3.9/copyreg.py
+# trying /home/phdyex/.local/lib/python3.9/copyreg.pyc
+# trying /usr/lib/python3.9/copyreg.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/copyreg.abi3.dll
+# trying /usr/lib/python3.9/copyreg.dll
+# trying /usr/lib/python3.9/copyreg.py
+# /usr/lib/python3.9/__pycache__/copyreg.cpython-39.pyc matches /usr/lib/python3.9/copyreg.py
+# code object from '/usr/lib/python3.9/__pycache__/copyreg.cpython-39.pyc'
+import 'copyreg' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffd96430>
+import 're' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe1eeb0>
+import 'typing' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe50e20>
+import 'importlib.abc' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe43c10>
+import 'importlib.util' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffeb7d60>
+# trying /home/phdyex/.local/lib/python3.9/pathlib.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/pathlib.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/pathlib.dll
+# trying /home/phdyex/.local/lib/python3.9/pathlib.py
+# trying /home/phdyex/.local/lib/python3.9/pathlib.pyc
+# trying /usr/lib/python3.9/pathlib.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/pathlib.abi3.dll
+# trying /usr/lib/python3.9/pathlib.dll
+# trying /usr/lib/python3.9/pathlib.py
+# /usr/lib/python3.9/__pycache__/pathlib.cpython-39.pyc matches /usr/lib/python3.9/pathlib.py
+# code object from '/usr/lib/python3.9/__pycache__/pathlib.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/fnmatch.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/fnmatch.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/fnmatch.dll
+# trying /home/phdyex/.local/lib/python3.9/fnmatch.py
+# trying /home/phdyex/.local/lib/python3.9/fnmatch.pyc
+# trying /usr/lib/python3.9/fnmatch.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/fnmatch.abi3.dll
+# trying /usr/lib/python3.9/fnmatch.dll
+# trying /usr/lib/python3.9/fnmatch.py
+# /usr/lib/python3.9/__pycache__/fnmatch.cpython-39.pyc matches /usr/lib/python3.9/fnmatch.py
+# code object from '/usr/lib/python3.9/__pycache__/fnmatch.cpython-39.pyc'
+import 'fnmatch' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffd54550>
+# trying /home/phdyex/.local/lib/python3.9/ntpath.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/ntpath.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/ntpath.dll
+# trying /home/phdyex/.local/lib/python3.9/ntpath.py
+# trying /home/phdyex/.local/lib/python3.9/ntpath.pyc
+# trying /usr/lib/python3.9/ntpath.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/ntpath.abi3.dll
+# trying /usr/lib/python3.9/ntpath.dll
+# trying /usr/lib/python3.9/ntpath.py
+# /usr/lib/python3.9/__pycache__/ntpath.cpython-39.pyc matches /usr/lib/python3.9/ntpath.py
+# code object from '/usr/lib/python3.9/__pycache__/ntpath.cpython-39.pyc'
+# trying /home/phdyex/.local/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.py
+# trying /home/phdyex/.local/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/nt.abi3.dll
+# trying /usr/lib/python3.9/nt.dll
+# trying /usr/lib/python3.9/nt.py
+# trying /usr/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/lib-dynload/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.py
+# trying /usr/lib/python3.9/lib-dynload/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.pyc
+# trying /home/phdyex/my-repos/psutil/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/nt.abi3.dll
+# trying /home/phdyex/my-repos/psutil/nt.dll
+# trying /home/phdyex/my-repos/psutil/nt.py
+# trying /home/phdyex/my-repos/psutil/nt.pyc
+# trying /usr/local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.py
+# trying /usr/local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/my-repos/pathsed/src/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.py
+# trying /home/phdyex/my-repos/pathsed/src/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.py
+# trying /home/phdyex/.local/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/nt.abi3.dll
+# trying /usr/lib/python3.9/nt.dll
+# trying /usr/lib/python3.9/nt.py
+# trying /usr/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/lib-dynload/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.py
+# trying /usr/lib/python3.9/lib-dynload/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.pyc
+# trying /home/phdyex/my-repos/psutil/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/nt.abi3.dll
+# trying /home/phdyex/my-repos/psutil/nt.dll
+# trying /home/phdyex/my-repos/psutil/nt.py
+# trying /home/phdyex/my-repos/psutil/nt.pyc
+# trying /usr/local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.py
+# trying /usr/local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/my-repos/pathsed/src/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.py
+# trying /home/phdyex/my-repos/pathsed/src/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.py
+# trying /home/phdyex/.local/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/nt.abi3.dll
+# trying /usr/lib/python3.9/nt.dll
+# trying /usr/lib/python3.9/nt.py
+# trying /usr/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/lib-dynload/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.py
+# trying /usr/lib/python3.9/lib-dynload/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.pyc
+# trying /home/phdyex/my-repos/psutil/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/nt.abi3.dll
+# trying /home/phdyex/my-repos/psutil/nt.dll
+# trying /home/phdyex/my-repos/psutil/nt.py
+# trying /home/phdyex/my-repos/psutil/nt.pyc
+# trying /usr/local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.py
+# trying /usr/local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/my-repos/pathsed/src/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.py
+# trying /home/phdyex/my-repos/pathsed/src/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/nt.py
+# trying /home/phdyex/.local/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/nt.abi3.dll
+# trying /usr/lib/python3.9/nt.dll
+# trying /usr/lib/python3.9/nt.py
+# trying /usr/lib/python3.9/nt.pyc
+# trying /usr/lib/python3.9/lib-dynload/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.dll
+# trying /usr/lib/python3.9/lib-dynload/nt.py
+# trying /usr/lib/python3.9/lib-dynload/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/nt.pyc
+# trying /home/phdyex/my-repos/psutil/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/nt.abi3.dll
+# trying /home/phdyex/my-repos/psutil/nt.dll
+# trying /home/phdyex/my-repos/psutil/nt.py
+# trying /home/phdyex/my-repos/psutil/nt.pyc
+# trying /usr/local/lib/python3.9/site-packages/nt.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.dll
+# trying /usr/local/lib/python3.9/site-packages/nt.py
+# trying /usr/local/lib/python3.9/site-packages/nt.pyc
+# trying /home/phdyex/my-repos/pathsed/src/nt.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.dll
+# trying /home/phdyex/my-repos/pathsed/src/nt.py
+# trying /home/phdyex/my-repos/pathsed/src/nt.pyc
+import 'ntpath' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffd54820>
+import 'errno' # <class '_frozen_importlib.BuiltinImporter'>
+# trying /home/phdyex/.local/lib/python3.9/urllib.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/urllib.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/urllib.dll
+# trying /home/phdyex/.local/lib/python3.9/urllib.py
+# trying /home/phdyex/.local/lib/python3.9/urllib.pyc
+# /usr/lib/python3.9/urllib/__pycache__/__init__.cpython-39.pyc matches /usr/lib/python3.9/urllib/__init__.py
+# code object from '/usr/lib/python3.9/urllib/__pycache__/__init__.cpython-39.pyc'
+import 'urllib' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffd631f0>
+# trying /usr/lib/python3.9/urllib/parse.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/urllib/parse.abi3.dll
+# trying /usr/lib/python3.9/urllib/parse.dll
+# trying /usr/lib/python3.9/urllib/parse.py
+# /usr/lib/python3.9/urllib/__pycache__/parse.cpython-39.pyc matches /usr/lib/python3.9/urllib/parse.py
+# code object from '/usr/lib/python3.9/urllib/__pycache__/parse.cpython-39.pyc'
+import 'urllib.parse' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffd54f10>
+import 'pathlib' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe43f40>
+import '__editable___psutil_7_1_0_finder' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffe89c10>
+# trying /usr/local/lib/python3.9/site-packages/sphinxcontrib.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/sphinxcontrib.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/sphinxcontrib.dll
+# trying /usr/local/lib/python3.9/site-packages/sphinxcontrib.py
+# trying /usr/local/lib/python3.9/site-packages/sphinxcontrib.pyc
+# possible namespace for /usr/local/lib/python3.9/site-packages/sphinxcontrib
+# trying /home/phdyex/.local/lib/python3.9/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/_distutils_hack.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/_distutils_hack.dll
+# trying /home/phdyex/.local/lib/python3.9/_distutils_hack.py
+# trying /home/phdyex/.local/lib/python3.9/_distutils_hack.pyc
+# trying /usr/lib/python3.9/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/_distutils_hack.abi3.dll
+# trying /usr/lib/python3.9/_distutils_hack.dll
+# trying /usr/lib/python3.9/_distutils_hack.py
+# trying /usr/lib/python3.9/_distutils_hack.pyc
+# trying /usr/lib/python3.9/lib-dynload/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/_distutils_hack.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/_distutils_hack.dll
+# trying /usr/lib/python3.9/lib-dynload/_distutils_hack.py
+# trying /usr/lib/python3.9/lib-dynload/_distutils_hack.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/_distutils_hack.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/_distutils_hack.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/_distutils_hack.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/_distutils_hack.pyc
+# possible namespace for /home/phdyex/.local/lib/python3.9/site-packages/_distutils_hack
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/_distutils_hack.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/_distutils_hack.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/_distutils_hack.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/_distutils_hack.pyc
+# trying /home/phdyex/my-repos/psutil/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/_distutils_hack.abi3.dll
+# trying /home/phdyex/my-repos/psutil/_distutils_hack.dll
+# trying /home/phdyex/my-repos/psutil/_distutils_hack.py
+# trying /home/phdyex/my-repos/psutil/_distutils_hack.pyc
+# trying /usr/local/lib/python3.9/site-packages/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/_distutils_hack.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/_distutils_hack.dll
+# trying /usr/local/lib/python3.9/site-packages/_distutils_hack.py
+# trying /usr/local/lib/python3.9/site-packages/_distutils_hack.pyc
+# trying /home/phdyex/my-repos/pathsed/src/_distutils_hack.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/_distutils_hack.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/_distutils_hack.dll
+# trying /home/phdyex/my-repos/pathsed/src/_distutils_hack.py
+# trying /home/phdyex/my-repos/pathsed/src/_distutils_hack.pyc
+# /usr/lib/python3.9/site-packages/_distutils_hack/__pycache__/__init__.cpython-39.pyc matches /usr/lib/python3.9/site-packages/_distutils_hack/__init__.py
+# code object from '/usr/lib/python3.9/site-packages/_distutils_hack/__pycache__/__init__.cpython-39.pyc'
+import '_distutils_hack' # <_frozen_importlib_external.SourceFileLoader object at 0x6fffffd0a4f0>
+# trying /home/phdyex/.local/lib/python3.9/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/sitecustomize.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/sitecustomize.dll
+# trying /home/phdyex/.local/lib/python3.9/sitecustomize.py
+# trying /home/phdyex/.local/lib/python3.9/sitecustomize.pyc
+# trying /usr/lib/python3.9/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/sitecustomize.abi3.dll
+# trying /usr/lib/python3.9/sitecustomize.dll
+# trying /usr/lib/python3.9/sitecustomize.py
+# trying /usr/lib/python3.9/sitecustomize.pyc
+# trying /usr/lib/python3.9/lib-dynload/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/sitecustomize.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/sitecustomize.dll
+# trying /usr/lib/python3.9/lib-dynload/sitecustomize.py
+# trying /usr/lib/python3.9/lib-dynload/sitecustomize.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/sitecustomize.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/sitecustomize.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/sitecustomize.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/sitecustomize.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/sitecustomize.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/sitecustomize.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/sitecustomize.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/sitecustomize.pyc
+# trying /home/phdyex/my-repos/psutil/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/sitecustomize.abi3.dll
+# trying /home/phdyex/my-repos/psutil/sitecustomize.dll
+# trying /home/phdyex/my-repos/psutil/sitecustomize.py
+# trying /home/phdyex/my-repos/psutil/sitecustomize.pyc
+# trying /usr/local/lib/python3.9/site-packages/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/sitecustomize.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/sitecustomize.dll
+# trying /usr/local/lib/python3.9/site-packages/sitecustomize.py
+# trying /usr/local/lib/python3.9/site-packages/sitecustomize.pyc
+# trying /home/phdyex/my-repos/pathsed/src/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/sitecustomize.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/sitecustomize.dll
+# trying /home/phdyex/my-repos/pathsed/src/sitecustomize.py
+# trying /home/phdyex/my-repos/pathsed/src/sitecustomize.pyc
+# trying /usr/lib/python3.9/site-packages/sitecustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/site-packages/sitecustomize.abi3.dll
+# trying /usr/lib/python3.9/site-packages/sitecustomize.dll
+# trying /usr/lib/python3.9/site-packages/sitecustomize.py
+# trying /usr/lib/python3.9/site-packages/sitecustomize.pyc
+# trying /home/phdyex/.local/lib/python3.9/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/usercustomize.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/usercustomize.dll
+# trying /home/phdyex/.local/lib/python3.9/usercustomize.py
+# trying /home/phdyex/.local/lib/python3.9/usercustomize.pyc
+# trying /usr/lib/python3.9/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/usercustomize.abi3.dll
+# trying /usr/lib/python3.9/usercustomize.dll
+# trying /usr/lib/python3.9/usercustomize.py
+# trying /usr/lib/python3.9/usercustomize.pyc
+# trying /usr/lib/python3.9/lib-dynload/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/lib-dynload/usercustomize.abi3.dll
+# trying /usr/lib/python3.9/lib-dynload/usercustomize.dll
+# trying /usr/lib/python3.9/lib-dynload/usercustomize.py
+# trying /usr/lib/python3.9/lib-dynload/usercustomize.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/usercustomize.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/usercustomize.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/usercustomize.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/usercustomize.pyc
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/usercustomize.abi3.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/usercustomize.dll
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/usercustomize.py
+# trying /home/phdyex/.local/lib/python3.9/site-packages/cygapi-0.2.1-py3.9-cygwin-3.4.6-x86_64.egg/usercustomize.pyc
+# trying /home/phdyex/my-repos/psutil/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/psutil/usercustomize.abi3.dll
+# trying /home/phdyex/my-repos/psutil/usercustomize.dll
+# trying /home/phdyex/my-repos/psutil/usercustomize.py
+# trying /home/phdyex/my-repos/psutil/usercustomize.pyc
+# trying /usr/local/lib/python3.9/site-packages/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/local/lib/python3.9/site-packages/usercustomize.abi3.dll
+# trying /usr/local/lib/python3.9/site-packages/usercustomize.dll
+# trying /usr/local/lib/python3.9/site-packages/usercustomize.py
+# trying /usr/local/lib/python3.9/site-packages/usercustomize.pyc
+# trying /home/phdyex/my-repos/pathsed/src/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /home/phdyex/my-repos/pathsed/src/usercustomize.abi3.dll
+# trying /home/phdyex/my-repos/pathsed/src/usercustomize.dll
+# trying /home/phdyex/my-repos/pathsed/src/usercustomize.py
+# trying /home/phdyex/my-repos/pathsed/src/usercustomize.pyc
+# trying /usr/lib/python3.9/site-packages/usercustomize.cpython-39-x86_64-cygwin.dll
+# trying /usr/lib/python3.9/site-packages/usercustomize.abi3.dll
+# trying /usr/lib/python3.9/site-packages/usercustomize.dll
+# trying /usr/lib/python3.9/site-packages/usercustomize.py
+# trying /usr/lib/python3.9/site-packages/usercustomize.pyc
+import 'site' # <_frozen_importlib_external.SourceFileLoader object at 0x6ffffff33a30>
+Python 3.9.16 (main, Mar  8 2023, 22:47:22) 
+[GCC 11.3.0] on cygwin
+Type "help", "copyright", "credits" or "license" for more information.
+PASSED
+psutil/tests/test_process.py::TestProcess::test_long_name PASSED
+psutil/tests/test_process.py::TestProcess::test_memory_full_info PASSED
+psutil/tests/test_process.py::TestProcess::test_memory_info PASSED
+psutil/tests/test_process.py::TestProcess::test_memory_maps PASSED
+psutil/tests/test_process.py::TestProcess::test_memory_maps_lists_lib FAILED
+_____________________________________________ TestProcess.test_memory_maps_lists_lib ______________________________________________
+psutil/tests/test_process.py:663: in test_memory_maps_lists_lib
+    with copyload_shared_lib() as path:
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:2016: in copyload_shared_lib
+    src = random.choice(libs)
+/usr/lib/python3.9/random.py:346: in choice
+    return seq[self._randbelow(len(seq))]
+E   IndexError: list index out of range
+psutil/tests/test_process.py::TestProcess::test_memory_percent PASSED
+psutil/tests/test_process.py::TestProcess::test_name PASSED
+psutil/tests/test_process.py::TestProcess::test_nice FAILED
+______________________________________________________ TestProcess.test_nice ______________________________________________________
+psutil/tests/test_process.py:836: in test_nice
+    p.nice("str")
+psutil/__init__.py:810: in nice
+    self._proc.nice_set(value)
+psutil/_pscygwin.py:868: in wrapper
+    return fun(self, *args, **kwargs)
+psutil/_pscygwin.py:1196: in nice_set
+    return _psposix.set_process_priority(self.pid, value)
+E   AttributeError: module 'psutil._psposix' has no attribute 'set_process_priority'
+psutil/tests/test_process.py::TestProcess::test_num_ctx_switches FAILED
+________________________________________________ TestProcess.test_num_ctx_switches ________________________________________________
+psutil/tests/test_process.py:1095: in test_num_ctx_switches
+    raise pytest.fail("num ctx switches still the same after 2 iterations")
+E   Failed: num ctx switches still the same after 2 iterations
+psutil/tests/test_process.py::TestProcess::test_num_fds PASSED
+psutil/tests/test_process.py::TestProcess::test_num_handles SKIPPED (WINDOWS only)
+psutil/tests/test_process.py::TestProcess::test_num_threads FAILED
+__________________________________________________ TestProcess.test_num_threads ___________________________________________________
+psutil/tests/test_process.py:516: in test_num_threads
+    assert step2 == step1 + 1
+E   assert 1 == (1 + 1)
+psutil/tests/test_process.py::TestProcess::test_oneshot PASSED
+psutil/tests/test_process.py::TestProcess::test_oneshot_cache PASSED
+psutil/tests/test_process.py::TestProcess::test_oneshot_twice PASSED
+psutil/tests/test_process.py::TestProcess::test_open_files PASSED
+psutil/tests/test_process.py::TestProcess::test_open_files_2 PASSED
+psutil/tests/test_process.py::TestProcess::test_parent PASSED
+psutil/tests/test_process.py::TestProcess::test_parent_mocked_ctime PASSED
+psutil/tests/test_process.py::TestProcess::test_parent_multi PASSED
+psutil/tests/test_process.py::TestProcess::test_parents PASSED
+psutil/tests/test_process.py::TestProcess::test_parents_and_children PASSED
+psutil/tests/test_process.py::TestProcess::test_pid PASSED
+psutil/tests/test_process.py::TestProcess::test_pid_0 FAILED
+_____________________________________________________ TestProcess.test_pid_0 ______________________________________________________
+psutil/tests/test_process.py:1454: in test_pid_0
+    assert psutil.Process(1).ppid() == 0
+psutil/__init__.py:327: in __init__
+    self._init(pid)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=1)
+psutil/tests/test_process.py::TestProcess::test_ppid PASSED
+psutil/tests/test_process.py::TestProcess::test_reused_pid (name='suspend') SUBPASS
+psutil/tests/test_process.py::TestProcess::test_reused_pid (name='nice') SUBPASS
+psutil/tests/test_process.py::TestProcess::test_reused_pid (name='resume') SUBPASS
+psutil/tests/test_process.py::TestProcess::test_reused_pid (name='terminate') SUBPASS
+psutil/tests/test_process.py::TestProcess::test_reused_pid (name='send_signal') SUBPASS
+psutil/tests/test_process.py::TestProcess::test_reused_pid (name='kill') SUBPASS
+psutil/tests/test_process.py::TestProcess::test_reused_pid PASSED
+psutil/tests/test_process.py::TestProcess::test_rlimit SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_rlimit_get SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_rlimit_infinity SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_rlimit_infinity_value SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_rlimit_set SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_send_signal FAILED
+__________________________________________________ TestProcess.test_send_signal ___________________________________________________
+psutil/tests/test_process.py:110: in test_send_signal
+    self.assert_proc_gone(p)
+psutil/tests/__init__.py:1073: in assert_proc_gone
+    for fun, name in ns.iter(ns.all, clear_cache=True):
+psutil/tests/__init__.py:1569: in iter
+    self.clear_cache()
+psutil/tests/__init__.py:1576: in clear_cache
+    self._proc._init(self._proc.pid, _ignore_nsp=True)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=2897)
+psutil/tests/test_process.py::TestProcess::test_send_signal_mocked PASSED
+psutil/tests/test_process.py::TestProcess::test_status PASSED
+psutil/tests/test_process.py::TestProcess::test_suspend_resume FAILED
+_________________________________________________ TestProcess.test_suspend_resume _________________________________________________
+psutil/tests/test_process.py:1231: in test_suspend_resume
+    assert p.status() != psutil.STATUS_STOPPED
+E   AssertionError: assert 'stopped' != 'stopped'
+E    +  where 'stopped' = status()
+E    +    where status = psutil.Process(pid=2900, name='python3.9', status='sleeping', started='12:38:57').status
+E    +  and   'stopped' = psutil.STATUS_STOPPED
+psutil/tests/test_process.py::TestProcess::test_terminal FAILED
+____________________________________________________ TestProcess.test_terminal ____________________________________________________
+psutil/tests/test_process.py:300: in test_terminal
+    assert terminal == tty
+E   AssertionError: assert '/dev/tty34827' == '/dev/pty11'
+E     
+E     - /dev/pty11
+E     + /dev/tty34827
+psutil/tests/test_process.py::TestProcess::test_terminate FAILED
+___________________________________________________ TestProcess.test_terminate ____________________________________________________
+psutil/tests/test_process.py:99: in test_terminate
+    self.assert_proc_gone(p)
+psutil/tests/__init__.py:1073: in assert_proc_gone
+    for fun, name in ns.iter(ns.all, clear_cache=True):
+psutil/tests/__init__.py:1569: in iter
+    self.clear_cache()
+psutil/tests/__init__.py:1576: in clear_cache
+    self._proc._init(self._proc.pid, _ignore_nsp=True)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=2902)
+psutil/tests/test_process.py::TestProcess::test_threads FAILED
+____________________________________________________ TestProcess.test_threads _____________________________________________________
+psutil/tests/test_process.py:537: in test_threads
+    assert len(step2) == len(step1) + 1
+E   assert 0 == (0 + 1)
+E    +  where 0 = len([])
+E    +  and   0 = len([])
+psutil/tests/test_process.py::TestProcess::test_threads_2 PASSED
+psutil/tests/test_process.py::TestProcess::test_uids PASSED
+psutil/tests/test_process.py::TestProcess::test_username PASSED
+psutil/tests/test_process.py::TestProcess::test_wait_exited FAILED
+__________________________________________________ TestProcess.test_wait_exited ___________________________________________________
+psutil/tests/test_process.py:132: in test_wait_exited
+    self.assert_proc_gone(p)
+psutil/tests/__init__.py:1073: in assert_proc_gone
+    for fun, name in ns.iter(ns.all, clear_cache=True):
+psutil/tests/__init__.py:1569: in iter
+    self.clear_cache()
+psutil/tests/__init__.py:1576: in clear_cache
+    self._proc._init(self._proc.pid, _ignore_nsp=True)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=2905)
+psutil/tests/test_process.py::TestProcess::test_wait_non_children PASSED
+psutil/tests/test_process.py::TestProcess::test_wait_stopped PASSED
+psutil/tests/test_process.py::TestProcess::test_wait_timeout PASSED
+psutil/tests/test_process.py::TestProcess::test_wait_timeout_nonblocking FAILED
+____________________________________________ TestProcess.test_wait_timeout_nonblocking ____________________________________________
+psutil/tests/test_process.py:229: in test_wait_timeout_nonblocking
+    self.assert_proc_gone(p)
+psutil/tests/__init__.py:1073: in assert_proc_gone
+    for fun, name in ns.iter(ns.all, clear_cache=True):
+psutil/tests/__init__.py:1569: in iter
+    self.clear_cache()
+psutil/tests/__init__.py:1576: in clear_cache
+    self._proc._init(self._proc.pid, _ignore_nsp=True)
+psutil/__init__.py:354: in _init
+    self._proc = _psplatform.Process(pid)
+psutil/_pscygwin.py:889: in __init__
+    raise NoSuchProcess(pid)
+E   psutil.NoSuchProcess: process no longer exists (pid=2910)
+psutil/tests/test_process.py::TestProcess::test_weird_environ SKIPPED (not supported)
+psutil/tests/test_process.py::TestProcess::test_zombie_process FAILED
+_________________________________________________ TestProcess.test_zombie_process _________________________________________________
+psutil/tests/test_process.py:1380: in test_zombie_process
+    self.assert_proc_zombie(zombie)
+psutil/tests/__init__.py:1107: in assert_proc_zombie
+    assert proc.pid in psutil.pids()
+E   AssertionError
+psutil/tests/test_process.py::TestProcess::test_zombie_process_is_running_w_exc PASSED
+psutil/tests/test_process.py::TestProcess::test_zombie_process_status_w_exc PASSED
+psutil/tests/test_process.py::TestPopen::test__getattribute__ PASSED
+psutil/tests/test_process.py::TestPopen::test_ctx_manager PASSED
+psutil/tests/test_process.py::TestPopen::test_kill_terminate PASSED
+psutil/tests/test_process.py::TestPopen::test_misc PASSED
+psutil/tests/test_process_all.py::TestFetchAllProcesses::test_all FAILED
+_________________________________________________ TestFetchAllProcesses.test_all __________________________________________________
+psutil/tests/test_process_all.py:76: in proc_info
+    d = proc.as_dict(['ppid', 'name'])
+psutil/__init__.py:592: in as_dict
+    ret = meth()
+psutil/_common.py:469: in wrapper
+    raise err from None
+psutil/_common.py:467: in wrapper
+    ret = fun(self)
+psutil/__init__.py:679: in ppid
+    self._raise_if_pid_reused()
+psutil/__init__.py:482: in _raise_if_pid_reused
+    raise NoSuchProcess(self.pid, self._name, msg=msg)
+E   psutil.NoSuchProcess: process no longer exists and its PID has been reused (pid=790, name='cygrunsrv')
+During handling of the above exception, another exception occurred:
+psutil/tests/test_process_all.py:127: in test_all
+    for info in self.iter_proc_info():
+psutil/tests/test_process_all.py:122: in iter_proc_info
+    ls = [proc_info(pid) for pid in psutil.pids()]
+psutil/tests/test_process_all.py:122: in <listcomp>
+    ls = [proc_info(pid) for pid in psutil.pids()]
+psutil/tests/test_process_all.py:78: in proc_info
+    tcase.assert_proc_gone(proc)
+psutil/tests/__init__.py:1071: in assert_proc_gone
+    self.assert_pid_gone(proc.pid)
+psutil/tests/__init__.py:1063: in assert_pid_gone
+    raise pytest.fail("wasn't supposed to raise ZombieProcess")
+E   Failed: DID NOT RAISE <class 'psutil.NoSuchProcess'>
+psutil/tests/test_process_all.py::TestPidsRange::test_it PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_battery SKIPPED (no battery)
+psutil/tests/test_scripts.py::TestExampleScripts::test_coverage PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_cpu_distribution PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_disk_usage PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_executable PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_fans SKIPPED (not supported)
+psutil/tests/test_scripts.py::TestExampleScripts::test_free PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_ifconfig FAILED
+________________________________________________ TestExampleScripts.test_ifconfig _________________________________________________
+psutil/tests/test_scripts.py:119: in test_ifconfig
+    self.assert_stdout('ifconfig.py')
+psutil/tests/test_scripts.py:62: in assert_stdout
+    assert out, out
+E   AssertionError: 
+E   assert ''
+psutil/tests/test_scripts.py::TestExampleScripts::test_iotop PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_killall PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_meminfo PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_netstat PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_nettop PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_pidof PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_pmap PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_procinfo PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_procsmem SKIPPED (not supported)
+psutil/tests/test_scripts.py::TestExampleScripts::test_ps PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_pstree PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_sensors SKIPPED (no battery)
+psutil/tests/test_scripts.py::TestExampleScripts::test_temperatures SKIPPED (not supported)
+psutil/tests/test_scripts.py::TestExampleScripts::test_top PASSED
+psutil/tests/test_scripts.py::TestExampleScripts::test_who FAILED
+___________________________________________________ TestExampleScripts.test_who ___________________________________________________
+psutil/tests/test_scripts.py:107: in test_who
+    self.assert_stdout('who.py')
+psutil/tests/test_scripts.py:62: in assert_stdout
+    assert out, out
+E   AssertionError: 
+E   assert ''
+psutil/tests/test_scripts.py::TestExampleScripts::test_winservices SKIPPED (WINDOWS only)
+psutil/tests/test_scripts.py::TestInternalScripts::test_import_all FAILED
+_______________________________________________ TestInternalScripts.test_import_all _______________________________________________
+psutil/tests/test_scripts.py:202: in test_import_all
+    import_module_by_path(path)
+psutil/tests/__init__.py:1974: in import_module_by_path
+    spec.loader.exec_module(mod)
+<frozen importlib._bootstrap_external>:850: in exec_module
+    ???
+<frozen importlib._bootstrap>:228: in _call_with_frames_removed
+    ???
+scripts/internal/bench_oneshot_2.py:13: in <module>
+    import pyperf  # requires "pip install pyperf"
+E   ModuleNotFoundError: No module named 'pyperf'
+psutil/tests/test_scripts.py::TestInternalScripts::test_syntax_all PASSED
+psutil/tests/test_scripts.py::TestSetupScript::test_invocation PASSED
+psutil/tests/test_scripts.py::TestSetupScript::test_python2 PASSED
+psutil/tests/test_sunos.py::SunOSSpecificTestCase::test_cpu_count SKIPPED (SUNOS only)
+psutil/tests/test_sunos.py::SunOSSpecificTestCase::test_swap_memory SKIPPED (SUNOS only)
+psutil/tests/test_system.py::TestProcessIter::test_attrs psutil-debug [/home/phdyex/my-repos/psutil/psutil/__init__.py:1547]> refreshing Process instance for reused PID 790
+PASSED
+psutil/tests/test_system.py::TestProcessIter::test_cache_clear PASSED
+psutil/tests/test_system.py::TestProcessIter::test_emulate_access_denied PASSED
+psutil/tests/test_system.py::TestProcessIter::test_emulate_nsp PASSED
+psutil/tests/test_system.py::TestProcessIter::test_no_duplicates PASSED
+psutil/tests/test_system.py::TestProcessIter::test_pid_presence PASSED
+psutil/tests/test_system.py::TestProcessAPIs::test_pid_exists PASSED
+psutil/tests/test_system.py::TestProcessAPIs::test_pid_exists_2 PASSED
+psutil/tests/test_system.py::TestProcessAPIs::test_wait_procs PASSED
+psutil/tests/test_system.py::TestProcessAPIs::test_wait_procs_no_timeout PASSED
+psutil/tests/test_system.py::TestMiscAPIs::test_boot_time PASSED
+psutil/tests/test_system.py::TestMiscAPIs::test_os_constants PASSED
+psutil/tests/test_system.py::TestMiscAPIs::test_users FAILED
+_____________________________________________________ TestMiscAPIs.test_users _____________________________________________________
+psutil/tests/test_system.py:244: in test_users
+    assert users
+E   assert []
+psutil/tests/test_system.py::TestMemoryAPIs::test_swap_memory PASSED
+psutil/tests/test_system.py::TestMemoryAPIs::test_virtual_memory PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_count_cores PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_count_logical PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_count_none PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_freq SKIPPED (not supported)
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_percent PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_stats PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='user', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='nice', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='system', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='idle', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='iowait', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='irq', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison (base=scputimes(user=18006.806, nice=0.0, system=8047.151, idle=333248.383, iowait=0.0, irq=0.0, softirq=0.0), field='softirq', per_cpu=[scputimes(user=760.968, nice=0.0, system=980.437, idle=20715.093, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=595.312, nice=0.0, system=421.578, idle=21439.5, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2660.156, nice=0.0, system=1010.078, idle=18786.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=859.843, nice=0.0, system=354.828, idle=21241.718, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=2122.375, nice=0.0, system=649.968, idle=19684.046, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=884.39, nice=0.0, system=328.843, idle=21243.156, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1493.515, nice=0.0, system=486.296, idle=20476.578, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1165.906, nice=0.0, system=292.25, idle=20998.234, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1100.39, nice=0.0, system=448.156, idle=20907.843, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=541.093, nice=0.0, system=406.734, idle=21508.562, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1084.515, nice=0.0, system=560.937, idle=20810.937, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1012.75, nice=0.0, system=304.046, idle=21139.593, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1123.14, nice=0.0, system=550.625, idle=20782.625, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=682.125, nice=0.0, system=314.125, idle=21460.14, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=1092.953, nice=0.0, system=498.0, idle=20865.437, iowait=0.0, irq=0.0, softirq=0.0), scputimes(user=827.375, nice=0.0, system=440.25, idle=21188.765, iowait=0.0, irq=0.0, softirq=0.0)]) SUBPASS
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_comparison PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_percent PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_cpu_times_time_increases PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_getloadavg PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_per_cpu_percent PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_per_cpu_times PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_per_cpu_times_2 PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_per_cpu_times_percent PASSED
+psutil/tests/test_system.py::TestCpuAPIs::test_per_cpu_times_percent_negative PASSED
+psutil/tests/test_system.py::TestDiskAPIs::test_disk_io_counters PASSED
+psutil/tests/test_system.py::TestDiskAPIs::test_disk_io_counters_no_disks PASSED
+psutil/tests/test_system.py::TestDiskAPIs::test_disk_partitions PASSED
+psutil/tests/test_system.py::TestDiskAPIs::test_disk_usage PASSED
+psutil/tests/test_system.py::TestDiskAPIs::test_disk_usage_bytes PASSED
+psutil/tests/test_system.py::TestDiskAPIs::test_disk_usage_unicode SKIPPED (not an ASCII fs)
+psutil/tests/test_system.py::TestNetAPIs::test_net_if_addrs FAILED
+__________________________________________________ TestNetAPIs.test_net_if_addrs __________________________________________________
+psutil/tests/test_system.py:796: in test_net_if_addrs
+    assert nics, nics
+E   AssertionError: {}
+E   assert {}
+psutil/tests/test_system.py::TestNetAPIs::test_net_if_addrs_mac_null_bytes PASSED
+psutil/tests/test_system.py::TestNetAPIs::test_net_if_stats FAILED
+__________________________________________________ TestNetAPIs.test_net_if_stats __________________________________________________
+psutil/tests/test_system.py:889: in test_net_if_stats
+    assert nics, nics
+E   AssertionError: {}
+E   assert {}
+psutil/tests/test_system.py::TestNetAPIs::test_net_if_stats_enodev SKIPPED (LINUX or BSD or MACOS specific)
+psutil/tests/test_system.py::TestNetAPIs::test_net_io_counters PASSED
+psutil/tests/test_system.py::TestNetAPIs::test_net_io_counters_no_nics PASSED
+psutil/tests/test_system.py::TestSensorsAPIs::test_sensors_battery SKIPPED (no battery)
+psutil/tests/test_system.py::TestSensorsAPIs::test_sensors_fans SKIPPED (not supported)
+psutil/tests/test_system.py::TestSensorsAPIs::test_sensors_temperatures SKIPPED (not supported)
+psutil/tests/test_system.py::TestSensorsAPIs::test_sensors_temperatures_fahreneit SKIPPED (not supported)
+psutil/tests/test_testutils.py::TestRetryDecorator::test_exception_arg PASSED
+psutil/tests/test_testutils.py::TestRetryDecorator::test_no_interval_arg PASSED
+psutil/tests/test_testutils.py::TestRetryDecorator::test_retries_and_timeout_args PASSED
+psutil/tests/test_testutils.py::TestRetryDecorator::test_retries_arg PASSED
+psutil/tests/test_testutils.py::TestRetryDecorator::test_retry_failure PASSED
+psutil/tests/test_testutils.py::TestRetryDecorator::test_retry_success PASSED
+psutil/tests/test_testutils.py::TestSyncTestUtils::test_call_until PASSED
+psutil/tests/test_testutils.py::TestSyncTestUtils::test_wait_for_file PASSED
+psutil/tests/test_testutils.py::TestSyncTestUtils::test_wait_for_file_empty PASSED
+psutil/tests/test_testutils.py::TestSyncTestUtils::test_wait_for_file_no_delete PASSED
+psutil/tests/test_testutils.py::TestSyncTestUtils::test_wait_for_file_no_file PASSED
+psutil/tests/test_testutils.py::TestSyncTestUtils::test_wait_for_pid PASSED
+psutil/tests/test_testutils.py::TestFSTestUtils::test_chdir PASSED
+psutil/tests/test_testutils.py::TestFSTestUtils::test_open_binary PASSED
+psutil/tests/test_testutils.py::TestFSTestUtils::test_open_text PASSED
+psutil/tests/test_testutils.py::TestFSTestUtils::test_safe_mkdir PASSED
+psutil/tests/test_testutils.py::TestFSTestUtils::test_safe_rmpath PASSED
+psutil/tests/test_testutils.py::TestProcessUtils::test_reap_children PASSED
+psutil/tests/test_testutils.py::TestProcessUtils::test_spawn_children_pair PASSED
+psutil/tests/test_testutils.py::TestProcessUtils::test_spawn_zombie PASSED
+psutil/tests/test_testutils.py::TestProcessUtils::test_terminate PASSED
+psutil/tests/test_testutils.py::TestNetUtils::test_bind_unix_socket PASSED
+psutil/tests/test_testutils.py::TestNetUtils::test_create_sockets FAILED
+________________________________________________ TestNetUtils.test_create_sockets _________________________________________________
+psutil/tests/test_testutils.py:350: in test_create_sockets
+    with create_sockets() as socks:
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:1839: in create_sockets
+    s1, s2 = unix_socketpair(fname1)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_testutils.py::TestNetUtils::test_tcp_socketpair PASSED
+psutil/tests/test_testutils.py::TestNetUtils::test_unix_socketpair FAILED
+________________________________________________ TestNetUtils.test_unix_socketpair ________________________________________________
+psutil/tests/test_testutils.py:332: in test_unix_socketpair
+    server, client = unix_socketpair(name)
+psutil/tests/__init__.py:1810: in unix_socketpair
+    client.connect(name)
+E   BlockingIOError: [Errno 119] Operation now in progress
+psutil/tests/test_testutils.py::TestMemLeakClass::test_execute_w_exc PASSED
+psutil/tests/test_testutils.py::TestMemLeakClass::test_leak_mem 
+Run #1: extra-mem=24.4M, per-call=250.2K, calls=100
+Run #2: extra-mem=48.8M, per-call=249.6K, calls=200
+Run #3: extra-mem=72.7M, per-call=248.1K, calls=300
+Run #4: extra-mem=97.4M, per-call=249.4K, calls=400
+Run #5: extra-mem=121.2M, per-call=248.2K, calls=500
+PASSED
+psutil/tests/test_testutils.py::TestMemLeakClass::test_param_err PASSED
+psutil/tests/test_testutils.py::TestMemLeakClass::test_times PASSED
+psutil/tests/test_testutils.py::TestMemLeakClass::test_tolerance PASSED
+psutil/tests/test_testutils.py::TestMemLeakClass::test_unclosed_files PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_fail PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_main test_passed (test_file.TestCase) ... ok
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK
+PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_mark PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_raises PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_skip s
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK (skipped=1)
+PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_skipif s
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK (skipped=1)
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+OK
+PASSED
+psutil/tests/test_testutils.py::TestFakePytest::test_warns PASSED
+psutil/tests/test_testutils.py::TestTestingUtils::test_process_namespace PASSED
+psutil/tests/test_testutils.py::TestTestingUtils::test_system_namespace PASSED
+psutil/tests/test_testutils.py::TestOtherUtils::test_is_namedtuple PASSED
+psutil/tests/test_unicode.py::TestFSAPIs::test_disk_usage PASSED
+psutil/tests/test_unicode.py::TestFSAPIs::test_memory_maps FAILED
+___________________________________________________ TestFSAPIs.test_memory_maps ___________________________________________________
+psutil/tests/test_unicode.py:267: in test_memory_maps
+    with copyload_shared_lib(suffix=self.funky_suffix) as funky_path:
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:2016: in copyload_shared_lib
+    src = random.choice(libs)
+/usr/lib/python3.9/random.py:346: in choice
+    return seq[self._randbelow(len(seq))]
+E   IndexError: list index out of range
+psutil/tests/test_unicode.py::TestFSAPIs::test_net_connections FAILED
+_________________________________________________ TestFSAPIs.test_net_connections _________________________________________________
+psutil/tests/test_unicode.py:255: in test_net_connections
+    conn = find_sock(cons)
+psutil/tests/test_unicode.py:249: in find_sock
+    raise ValueError("connection not found")
+E   ValueError: connection not found
+psutil/tests/test_unicode.py::TestFSAPIs::test_proc_cmdline PASSED
+psutil/tests/test_unicode.py::TestFSAPIs::test_proc_cwd PASSED
+psutil/tests/test_unicode.py::TestFSAPIs::test_proc_exe PASSED
+psutil/tests/test_unicode.py::TestFSAPIs::test_proc_name PASSED
+psutil/tests/test_unicode.py::TestFSAPIs::test_proc_net_connections FAILED
+______________________________________________ TestFSAPIs.test_proc_net_connections _______________________________________________
+psutil/tests/test_unicode.py:233: in test_proc_net_connections
+    conn = psutil.Process().net_connections('unix')[0]
+E   IndexError: list index out of range
+psutil/tests/test_unicode.py::TestFSAPIs::test_proc_open_files PASSED
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_disk_usage PASSED
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_memory_maps FAILED
+___________________________________________ TestFSAPIsWithInvalidPath.test_memory_maps ____________________________________________
+psutil/tests/test_unicode.py:267: in test_memory_maps
+    with copyload_shared_lib(suffix=self.funky_suffix) as funky_path:
+/usr/lib/python3.9/contextlib.py:119: in __enter__
+    return next(self.gen)
+psutil/tests/__init__.py:2016: in copyload_shared_lib
+    src = random.choice(libs)
+/usr/lib/python3.9/random.py:346: in choice
+    return seq[self._randbelow(len(seq))]
+E   IndexError: list index out of range
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_net_connections FAILED
+_________________________________________ TestFSAPIsWithInvalidPath.test_net_connections __________________________________________
+psutil/tests/test_unicode.py:255: in test_net_connections
+    conn = find_sock(cons)
+psutil/tests/test_unicode.py:249: in find_sock
+    raise ValueError("connection not found")
+E   ValueError: connection not found
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_cmdline FAILED
+___________________________________________ TestFSAPIsWithInvalidPath.test_proc_cmdline ___________________________________________
+psutil/tests/test_unicode.py:201: in test_proc_cmdline
+    assert cmdline == cmd
+E   AssertionError: assert ['/tmp/@psuti... range(100)]'] == ['/tmp/@psuti... range(100)]']
+E     
+E     At index 0 diff: '/tmp/@psutil-2834-kpgh6npaf' != '/tmp/@psutil-2834-kpgh6npaf\udcc0\udc80'
+E     
+E     Full diff:
+E       [
+E     -     '/tmp/@psutil-2834-kpgh6npaf\udcc0\udc80',
+E     ?                                 ------------...
+E     
+E     ...Full output truncated (4 lines hidden), use '-vv' to show
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_cwd PASSED
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_exe PASSED
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_name FAILED
+____________________________________________ TestFSAPIsWithInvalidPath.test_proc_name _____________________________________________
+psutil/tests/test_unicode.py:187: in test_proc_name
+    assert name == os.path.basename(self.funky_name)
+E   AssertionError: assert '@psutil-2834-kpgh6npaf' == '@psutil-2834...f\udcc0\udc80'
+E     
+E     - @psutil-2834-kpgh6npaf��
+E     ?                       --
+E     + @psutil-2834-kpgh6npaf
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_net_connections FAILED
+_______________________________________ TestFSAPIsWithInvalidPath.test_proc_net_connections _______________________________________
+psutil/tests/test_unicode.py:233: in test_proc_net_connections
+    conn = psutil.Process().net_connections('unix')[0]
+E   IndexError: list index out of range
+psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_open_files PASSED
+psutil/tests/test_unicode.py::TestNonFSAPIS::test_proc_environ SKIPPED (not supported)
+psutil/tests/test_windows.py::TestCpuAPIs::test_cpu_count_cores_vs_wmi SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestCpuAPIs::test_cpu_count_logical_vs_wmi SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestCpuAPIs::test_cpu_count_vs_GetSystemInfo SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestCpuAPIs::test_cpu_count_vs_NUMBER_OF_PROCESSORS SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestCpuAPIs::test_cpu_count_vs_cpu_times SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestCpuAPIs::test_cpu_freq SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_boot_time SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_convert_dos_path_drive SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_convert_dos_path_unc SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_disk_partitions SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_disk_usage SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_disks SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_free_phymem SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_net_if_stats SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_nic_names SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_percent_swapmem SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_pids SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_total_phymem SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_total_swapmem SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSystemAPIs::test_uptime SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSensorsBattery::test_emulate_no_battery SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSensorsBattery::test_emulate_power_charging SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSensorsBattery::test_emulate_power_connected SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSensorsBattery::test_emulate_secs_left_unknown SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSensorsBattery::test_has_battery SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestSensorsBattery::test_percent SKIPPED (no battery)
+psutil/tests/test_windows.py::TestSensorsBattery::test_power_plugged SKIPPED (no battery)
+psutil/tests/test_windows.py::TestProcess::test_cmdline SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_cpu_affinity SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_ctrl_signals SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_error_partial_copy SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_exe SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_io_counters SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_issue_24 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_memory_info SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_nice SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_num_handles SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_num_handles_increment SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_send_signal SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_special_pid SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_username SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcess::test_wait SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_cmdline SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_create_time SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_exe SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_memory_rss SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_memory_vms SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_name SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestProcessWMI::test_username SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestDualProcessImplementation::test_cmdline SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestDualProcessImplementation::test_cpu_times SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestDualProcessImplementation::test_create_time SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestDualProcessImplementation::test_io_counters SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestDualProcessImplementation::test_memory_info SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestDualProcessImplementation::test_num_handles SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::RemoteProcessTestCase::test_cmdline_32 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::RemoteProcessTestCase::test_cmdline_64 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::RemoteProcessTestCase::test_cwd_32 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::RemoteProcessTestCase::test_cwd_64 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::RemoteProcessTestCase::test_environ_32 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::RemoteProcessTestCase::test_environ_64 SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestServices::test_win_service_get SKIPPED (WINDOWS only)
+psutil/tests/test_windows.py::TestServices::test_win_service_iter SKIPPED (WINDOWS only)
+===================================================== short test summary info =====================================================
+FAILED psutil/tests/test_connections.py::TestBasicOperations::test_process - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_connections.py::TestBasicOperations::test_system - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_connections.py::TestUnconnectedSockets::test_tcp_v4 - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestUnconnectedSockets::test_tcp_v6 - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestUnconnectedSockets::test_udp_v4 - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestUnconnectedSockets::test_udp_v6 - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestUnconnectedSockets::test_unix_tcp - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestUnconnectedSockets::test_unix_udp - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestConnectedSocket::test_tcp - assert 0 == 2
+FAILED psutil/tests/test_connections.py::TestConnectedSocket::test_unix - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_connections.py::TestFilters::test_combos - assert 0 == 1
+FAILED psutil/tests/test_connections.py::TestFilters::test_count - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_connections.py::TestFilters::test_filters - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_connections.py::TestSystemWideConnections::test_it - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_connections.py::TestSystemWideConnections::test_multi_sockets_procs - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_contracts.py::TestSystemAPITypes::test_net_connections - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_misc.py::TestSpecialMethods::test_process__repr__ - assert "status='terminated'" in "psutil.Process(pid=2843, name='python3.9', status='running', exitcode=<Negsignal.SIGTERM: -15...
+FAILED psutil/tests/test_misc.py::TestSpecialMethods::test_process__str__ - assert "status='terminated'" in "psutil.Process(pid=2844, name='python3.9', status='running', exitcode=<Negsignal.SIGTERM: -15...
+FAILED psutil/tests/test_misc.py::TestWrapNumbers::test_cache_clear_public_apis - AssertionError: assert 'psutil.disk_io_counters' in {}
+FAILED psutil/tests/test_posix.py::TestProcess::test_cmdline - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_create_time - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_exe - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_gid - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_name - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_nice - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_ppid - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_rss_memory - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_uid - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_username - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestProcess::test_vsz_memory - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_posix.py::TestSystemAPIs::test_pids - RuntimeError: ps: unknown option -- o
+FAILED psutil/tests/test_process.py::TestProcess::test_as_dict - psutil.NoSuchProcess: process no longer exists and its PID has been reused (pid=790)
+FAILED psutil/tests/test_process.py::TestProcess::test_cmdline - AssertionError: assert '/usr/bin/pyt...n range(100)]' == '/usr/bin/pyt...n range(100)]'
+FAILED psutil/tests/test_process.py::TestProcess::test_halfway_terminated_process - psutil.NoSuchProcess: process no longer exists (pid=2878)
+FAILED psutil/tests/test_process.py::TestProcess::test_io_counters - assert 0 > 0
+FAILED psutil/tests/test_process.py::TestProcess::test_kill - psutil.NoSuchProcess: process no longer exists (pid=2880)
+FAILED psutil/tests/test_process.py::TestProcess::test_memory_maps_lists_lib - IndexError: list index out of range
+FAILED psutil/tests/test_process.py::TestProcess::test_nice - AttributeError: module 'psutil._psposix' has no attribute 'set_process_priority'
+FAILED psutil/tests/test_process.py::TestProcess::test_num_ctx_switches - Failed: num ctx switches still the same after 2 iterations
+FAILED psutil/tests/test_process.py::TestProcess::test_num_threads - assert 1 == (1 + 1)
+FAILED psutil/tests/test_process.py::TestProcess::test_pid_0 - psutil.NoSuchProcess: process no longer exists (pid=1)
+FAILED psutil/tests/test_process.py::TestProcess::test_send_signal - psutil.NoSuchProcess: process no longer exists (pid=2897)
+FAILED psutil/tests/test_process.py::TestProcess::test_suspend_resume - AssertionError: assert 'stopped' != 'stopped'
+FAILED psutil/tests/test_process.py::TestProcess::test_terminal - AssertionError: assert '/dev/tty34827' == '/dev/pty11'
+FAILED psutil/tests/test_process.py::TestProcess::test_terminate - psutil.NoSuchProcess: process no longer exists (pid=2902)
+FAILED psutil/tests/test_process.py::TestProcess::test_threads - assert 0 == (0 + 1)
+FAILED psutil/tests/test_process.py::TestProcess::test_wait_exited - psutil.NoSuchProcess: process no longer exists (pid=2905)
+FAILED psutil/tests/test_process.py::TestProcess::test_wait_timeout_nonblocking - psutil.NoSuchProcess: process no longer exists (pid=2910)
+FAILED psutil/tests/test_process.py::TestProcess::test_zombie_process - AssertionError
+FAILED psutil/tests/test_process_all.py::TestFetchAllProcesses::test_all - Failed: DID NOT RAISE <class 'psutil.NoSuchProcess'>
+FAILED psutil/tests/test_scripts.py::TestExampleScripts::test_ifconfig - AssertionError: 
+FAILED psutil/tests/test_scripts.py::TestExampleScripts::test_who - AssertionError: 
+FAILED psutil/tests/test_scripts.py::TestInternalScripts::test_import_all - ModuleNotFoundError: No module named 'pyperf'
+FAILED psutil/tests/test_system.py::TestMiscAPIs::test_users - assert []
+FAILED psutil/tests/test_system.py::TestNetAPIs::test_net_if_addrs - AssertionError: {}
+FAILED psutil/tests/test_system.py::TestNetAPIs::test_net_if_stats - AssertionError: {}
+FAILED psutil/tests/test_testutils.py::TestNetUtils::test_create_sockets - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_testutils.py::TestNetUtils::test_unix_socketpair - BlockingIOError: [Errno 119] Operation now in progress
+FAILED psutil/tests/test_unicode.py::TestFSAPIs::test_memory_maps - IndexError: list index out of range
+FAILED psutil/tests/test_unicode.py::TestFSAPIs::test_net_connections - ValueError: connection not found
+FAILED psutil/tests/test_unicode.py::TestFSAPIs::test_proc_net_connections - IndexError: list index out of range
+FAILED psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_memory_maps - IndexError: list index out of range
+FAILED psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_net_connections - ValueError: connection not found
+FAILED psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_cmdline - AssertionError: assert ['/tmp/@psuti... range(100)]'] == ['/tmp/@psuti... range(100)]']
+FAILED psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_name - AssertionError: assert '@psutil-2834-kpgh6npaf' == '@psutil-2834...f\udcc0\udc80'
+FAILED psutil/tests/test_unicode.py::TestFSAPIsWithInvalidPath::test_proc_net_connections - IndexError: list index out of range
+=========================== 66 failed, 246 passed, 280 skipped, 55 subtests passed in 145.97s (0:02:25) ===========================
+make: *** [Makefile:95: test] Error 1
+Script done on 2025-08-22 12:40:44-04:00 [COMMAND_EXIT_CODE="2"]
+
