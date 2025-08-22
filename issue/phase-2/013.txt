@@ -1,0 +1,139 @@
+Script started on 2025-08-22 18:03:32-04:00 [COMMAND="set -x && python issue/phase-2/test_runner.py" TERM="screen.xterm-256color" TTY="/dev/pty3" COLUMNS="131" LINES="44"]
++ python issue/phase-2/test_runner.py
+============================================================
+PHASE 2 TEST RUNNER: Network Connections Implementation
+============================================================
+Phase 2 Network Connection Tests:
+----------------------------------------
+📋 TestBasicOperations.test_process
+📋 TestBasicOperations.test_system
+📋 TestUnconnectedSockets.test_tcp_v4
+📋 TestUnconnectedSockets.test_tcp_v6
+📋 TestUnconnectedSockets.test_udp_v4
+📋 TestUnconnectedSockets.test_udp_v6
+📋 TestUnconnectedSockets.test_unix_tcp
+📋 TestUnconnectedSockets.test_unix_udp
+📋 TestConnectedSocket.test_tcp
+📋 TestConnectedSocket.test_unix
+📋 TestSystemWideConnections.test_it
+❌ Could not find test: TestSystemWideConnections.test_duplicate_address - 'TestSystemWideConnections' object has no attribute 'test_duplicate_address'
+❌ Could not find test: TestSystemWideConnections.test_families - 'TestSystemWideConnections' object has no attribute 'test_families'
+❌ Could not find test: TestSystemWideConnections.test_combos - 'TestSystemWideConnections' object has no attribute 'test_combos'
+❌ Could not find test: TestProcessConnections.test_proc_net_connections - module 'test_connections' has no attribute 'TestProcessConnections'
+❌ Could not find test: TestProcessConnections.test_proc_net_connections_reuse_address - module 'test_connections' has no attribute 'TestProcessConnections'
+Running Phase 2 Tests...
+----------------------------------------
+unittest.case.FunctionTestCase (test_process) ... ok
+unittest.case.FunctionTestCase (test_system) ... ok
+unittest.case.FunctionTestCase (test_tcp_v4) ... FAIL
+unittest.case.FunctionTestCase (test_tcp_v6) ... FAIL
+unittest.case.FunctionTestCase (test_udp_v4) ... FAIL
+unittest.case.FunctionTestCase (test_udp_v6) ... FAIL
+unittest.case.FunctionTestCase (test_unix_tcp) ... FAIL
+unittest.case.FunctionTestCase (test_unix_udp) ... FAIL
+unittest.case.FunctionTestCase (test_tcp) ... FAIL
+unittest.case.FunctionTestCase (test_unix) ... ERROR
+unittest.case.FunctionTestCase (test_it) ... ok
+======================================================================
+ERROR: unittest.case.FunctionTestCase (test_unix)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 232, in test_unix
+    assert not (cons[0].laddr and cons[0].raddr), cons
+IndexError: list index out of range
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_tcp_v4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 154, in test_tcp_v4
+    conn = self.check_socket(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 126, in check_socket
+    conn = self.get_conn_from_sock(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 116, in get_conn_from_sock
+    assert len(cons) == 1
+AssertionError
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_tcp_v6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 162, in test_tcp_v6
+    conn = self.check_socket(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 126, in check_socket
+    conn = self.get_conn_from_sock(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 116, in get_conn_from_sock
+    assert len(cons) == 1
+AssertionError
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_udp_v4)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 169, in test_udp_v4
+    conn = self.check_socket(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 126, in check_socket
+    conn = self.get_conn_from_sock(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 116, in get_conn_from_sock
+    assert len(cons) == 1
+AssertionError
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_udp_v6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 177, in test_udp_v6
+    conn = self.check_socket(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 126, in check_socket
+    conn = self.get_conn_from_sock(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 116, in get_conn_from_sock
+    assert len(cons) == 1
+AssertionError
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_unix_tcp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 185, in test_unix_tcp
+    conn = self.check_socket(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 126, in check_socket
+    conn = self.get_conn_from_sock(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 116, in get_conn_from_sock
+    assert len(cons) == 1
+AssertionError
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_unix_udp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 193, in test_unix_udp
+    conn = self.check_socket(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 126, in check_socket
+    conn = self.get_conn_from_sock(sock)
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 116, in get_conn_from_sock
+    assert len(cons) == 1
+AssertionError
+======================================================================
+FAIL: unittest.case.FunctionTestCase (test_tcp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/phdyex/my-repos/psutil/issue/phase-2/../../psutil/tests/test_connections.py", line 213, in test_tcp
+    assert len(cons) == 2
+AssertionError
+----------------------------------------------------------------------
+Ran 11 tests in 1.118s
+FAILED (failures=7, errors=1)
+============================================================
+PHASE 2 RESULTS
+============================================================
+❌ PHASE 2 INCOMPLETE
+❌ 7 test failures
+❌ 1 test errors
+📊 8/16 tests passed
+Failures:
+  • unittest.case.FunctionTestCase (test_tcp_v4)
+  • unittest.case.FunctionTestCase (test_tcp_v6)
+  • unittest.case.FunctionTestCase (test_udp_v4)
+  • unittest.case.FunctionTestCase (test_udp_v6)
+  • unittest.case.FunctionTestCase (test_unix_tcp)
+  • unittest.case.FunctionTestCase (test_unix_udp)
+  • unittest.case.FunctionTestCase (test_tcp)
+Errors:
+  • unittest.case.FunctionTestCase (test_unix)
+Remaining work needed for Phase 2 completion.
+Script done on 2025-08-22 18:03:36-04:00 [COMMAND_EXIT_CODE="1"]
+
